@@ -1,6 +1,6 @@
 /* Alan (A-System) — design-system tokens and component classes.
    Source of truth: src/styles/alan-design-system. Retune the look here. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
 
 :root {
   /* Brand & surfaces */
@@ -60,9 +60,9 @@
   --color-violet: #af52de;
   --color-coral: #ff2d55;
 
-  --font-heading: "Poppins", "Inter", system-ui, sans-serif;
+  --font-heading: "Alan Sans", system-ui, sans-serif;
   --font-heading-weight: 600;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-body: "Alan Sans", system-ui, sans-serif;
 
   --space-1: 4.4px;
   --space-2: 8.8px;
