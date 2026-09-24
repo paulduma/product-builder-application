@@ -1,4 +1,4 @@
-/* Page-level styles for the portfolio. Everything reads from the Organic tokens in organic.css. */
+/* Page-level styles for the portfolio. Everything reads from the Alan tokens in organic.css. */
 
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -6,7 +6,6 @@ body { margin: 0; text-wrap: pretty; overflow-x: clip; }
 a { color: var(--color-accent-700); text-decoration: none; }
 a:hover { color: var(--color-accent-800); text-decoration: underline; }
 a.btn:hover { text-decoration: none; }
-.btn-primary:hover { color: var(--color-bg); }
 
 /* — shell — */
 .shell { min-height: 100vh; display: flex; flex-direction: column; background: var(--color-bg); }
@@ -127,7 +126,7 @@ main.container { flex: 1; }
   padding: 16px 20px; border-radius: 6px 22px 22px 22px; transform: rotate(-1.2deg);
   box-shadow: var(--shadow-md); font-size: 15px; line-height: 1.5;
 }
-.sticky-note strong { font-family: var(--font-heading); font-weight: 400; font-size: 18px; margin-right: 6px; }
+.sticky-note strong { font-family: var(--font-heading); font-weight: 600; font-size: 18px; margin-right: 6px; }
 
 /* — page intro (roadmap / resume) — */
 .page { padding-block: clamp(48px, 7vw, 96px) clamp(64px, 9vw, 120px); }

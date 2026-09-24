@@ -1,0 +1,50 @@
+# Design System Prompt: Alan Style (A-System)
+
+Recrease une interface utilisateur (UI) fidèle au style visuel et à l'expérience utilisateur d'Alan (assurance santé). L'interface doit être bienveillante, ultra-claire, rassurante et épurée.
+
+---
+
+## 1. Identité Visuelle & Principes
+- **Atmosphère :** Chaleureuse, moderne, accessible et sans stress.
+- **Formes :** Angles très arrondis (border-radius généreux : `12px` à `24px`, et forme "pilule" `9999px` pour les boutons/badges).
+- **Cartes & Conteneurs :** Fond blanc sur fond de page légèrement grisé, séparations douces avec des bordures fines ou des ombres légères (`box-shadow: 0 4px 12px rgba(0,0,0,0.05)`).
+- **Inspiration Typographique :** Sans-serif géométrique et chaleureuse (ex: GT Walsheim, Inter ou Poppins).
+
+---
+
+## 2. Tokens de Couleurs Exacts
+
+### Primary & Brand
+- **Alan Green (Action / Core) :** `#00C88C`
+- **Deep Forest (Textes sur vert / Dark Green) :** `#003B2B`
+- **Mint (Fonds de badges / Succès) :** `#E6F9F3`
+
+### Neutres & UI
+- **Text Primary :** `#1A1C1E` (Quasi-noir adouci)
+- **Text Secondary :** `#6A737D` (Gris intermédiaire)
+- **Border / Divider :** `#E1E4E8` (Gris très clair)
+- **Surface / Background Page :** `#F6F8FA` (Fond global)
+- **Card Background :** `#FFFFFF` (Fond des composants)
+
+### Statuts Fonctionnels
+- **Info (Bleu) :** Text `#007AFF` | Background `#EBF3FF`
+- **Avertissement (Orange) :** Text `#FF9500` | Background `#FFF4E5`
+- **Erreur (Rouge) :** Text `#FF3B30` | Background `#FFEBEA`
+
+### Accents & Catégories (Pastels)
+- **Jaune (Prévention/Dentaire) :** `#FFD60A`
+- **Violet (Santé mentale/Mind) :** `#AF52DE`
+- **Rose/Corail (Optique/Maternité) :** `#FF2D55`
+
+---
+
+## 3. Composants UI
+- **Boutons :** Boutons principaux en `Alan Green` avec texte `Deep Forest` ou Blanc, coins très arrondis (`pill-shape`), padding généreux.
+- **Badges de Statut :** Petites étiquettes arrondies (`border-radius: 9999px`) utilisant les couples couleur/fond fonctionnels (ex: fond Mint + texte Deep Forest pour "Remboursé").
+- **Cards (Cartes) :** Cartes blanches interactives regroupant les informations (remboursements, garanties) avec titre en `Text Primary` et sous-titres en `Text Secondary`.
+- **Iconographie :** Icônes vectorielles simples, contours fins (*stroke*), pas de détails complexes.
+
+---
+
+## Directives d'implémentation
+Applique cette charte graphique pour concevoir [INSÉRER TON ÉCRAN / COMPOSANT ICI].
