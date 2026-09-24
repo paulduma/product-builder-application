@@ -4,7 +4,6 @@
 export const config = {
   animations: true, // scroll-reveal motion (always off under prefers-reduced-motion)
   showTimeline: true, // career path chips on the home page
-  showNextColumn: true, // "Next" column on the AI roadmap
 };
 
 export const contact = {
@@ -29,28 +28,62 @@ export const pathSteps = [
   { label: 'Betclic · PM Acquisition & KYC', cls: 'tag-accent' },
 ];
 
-export const roadmapColumns = [
+// — AI Roadmap —
+// One step per stage of the journey, top to bottom. `status`: 'done' | 'progress'.
+// Drop an image in src/assets and set `image` (plus `imageAlt`) to replace a step's placeholder.
+
+export const roadmapSteps = [
   {
-    key: 'done', title: 'Done', badge: 'Done', tagCls: 'tag-accent-2', dot: 'var(--color-accent-2)',
-    items: [
-      { title: 'Calendar assistant', desc: 'Updates my Google Agenda on request, in plain language.', tags: ['Claude', 'MCP connectors', 'Google Calendar'] },
-      { title: 'Portfolio & interview chatbot', desc: 'Answers recruiters’ questions about my background, grounded in my resume.', tags: ['Claude', 'Prompts', 'RAG'] },
-      { title: 'Shared agent setup for colleagues', desc: 'A packaged set of agents my teammates use in their daily workflows.', tags: ['Claude', 'MCP connectors', 'Docs'] },
-    ],
+    status: 'done',
+    title: 'Turning my PM work into Claude skills',
+    desc: 'It started with me: I wrote reusable Claude skills for the work I repeat every week — specs, Linear tickets, weekly reviews, stakeholder updates, benchmarks. Each skill encodes how I actually work, so the output is consistent from one run to the next.',
+    tags: ['Claude', 'Skills', 'Prompts'],
+    illustration: 'Paul at a workbench, turning sticky notes into neat little skill cards',
   },
   {
-    key: 'progress', title: 'In progress', badge: 'In progress', tagCls: 'tag-accent', dot: 'var(--color-accent)',
-    items: [
-      { title: 'Recipe planning platform', desc: 'Weekly meal plans with automatic shopping-list generation.', tags: ['Cursor', 'Claude', 'React'] },
-      { title: 'Output evaluation & prompt versioning', desc: 'Test sets and scoring so every prompt change is measured, not guessed.', tags: ['Evals', 'Prompts', 'Python'] },
-    ],
+    status: 'done',
+    title: 'Sharing it with the Product tribe — and training them',
+    desc: 'Skills only matter if people use them. I presented the setup to the Product tribe and ran training sessions so every PM could pick it up in their own workflows.',
+    tags: ['Adoption', 'Training', 'Product tribe'],
+    illustration: 'Paul in front of a small group of PMs, a big skill card on the whiteboard',
   },
   {
-    key: 'next', title: 'Next', badge: 'Next', tagCls: 'tag-neutral', dot: 'var(--color-neutral-500)',
-    items: [
-      { title: 'Proactive daily brief', desc: 'An assistant that surfaces the right action at the right time — before I ask.', tags: ['Agents', 'Scheduling', 'Placeholder'] },
-    ],
+    status: 'done',
+    title: 'Packaged as a plugin, shared through Git',
+    desc: 'To make it easy to install and to keep everyone up to date, I bundled the skills into a plugin, versioned in Git. One install, and every improvement reaches the whole team.',
+    tags: ['Plugin', 'Git', 'Versioning'],
+    illustration: 'A gift box labelled "plugin" travelling along a Git branch to several laptops',
   },
+  {
+    status: 'done',
+    title: 'A real Product OS, in Claude Code & the terminal',
+    desc: 'Next, I turned the plugin into a proper Product OS: the same skills now run in Claude Code and straight from the terminal, connected to our tools (Linear, Notion) — not just in a chat window.',
+    tags: ['Claude Code', 'Terminal', 'MCP connectors'],
+    illustration: 'A friendly terminal window with a Product OS logo, plugged into Linear and Notion',
+  },
+  {
+    status: 'done',
+    title: 'Frameworks: several skills, chained end to end',
+    desc: 'Then came frameworks — tools that run several skills one after the other. From a two-line feature idea to a written spec, a functional summary and ready-to-use Linear tickets, with a check-in at each step.',
+    tags: ['Frameworks', 'Workflows', 'Linear'],
+    illustration: 'Skill cards clicking together like train carriages, from "idea" to "tickets"',
+  },
+  {
+    status: 'progress',
+    target: true,
+    title: 'An autonomous agent you can talk to on Teams',
+    desc: 'The real target: an autonomous agent my colleagues can simply message on Microsoft Teams. It picks the right skills and frameworks on its own and comes back with the work done — moving from pull-based tools to a proactive assistant.',
+    tags: ['Agents', 'Microsoft Teams', 'Autonomy'],
+    illustration: 'A friendly agent character popping out of a Teams chat bubble, handing over a finished doc',
+  },
+];
+
+// Smaller builds that sit alongside the main journey.
+export const sideBuilds = [
+  { title: 'Calendar assistant', desc: 'Updates my Google Agenda on request, in plain language.', status: 'done', tags: ['Claude', 'MCP connectors', 'Google Calendar'] },
+  { title: 'Portfolio & interview chatbot', desc: 'Answers recruiters’ questions about my background, grounded in my resume.', status: 'done', tags: ['Claude', 'Prompts', 'RAG'] },
+  { title: 'Recipe planning platform', desc: 'Weekly meal plans with automatic shopping-list generation.', status: 'progress', tags: ['Cursor', 'Claude', 'React'] },
+  { title: 'Output evaluation & prompt versioning', desc: 'Test sets and scoring so every prompt change is measured, not guessed.', status: 'progress', tags: ['Evals', 'Prompts', 'Python'] },
 ];
 
 // — Resume —

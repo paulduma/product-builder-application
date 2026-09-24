@@ -12,7 +12,7 @@ export default function Home() {
             <span className="hello">Hello 👋</span>
             <span>My name is Paul, I'm a Product Builder.</span>
           </h1>
-          <p className="hero-lede">Product Manager with a strong Data &amp; AI edge — I turn ambitious ideas into shipped products.</p>
+          <p className="hero-lede">Product Manager with a strong Data &amp; AI edge. Two strengths: <strong>Build</strong>, the creative side — turning ambitious ideas into shipped products — and <strong>Translate</strong>, speaking between tech, business, sales and exec.</p>
           <div className="row">
             <a href={hrefFor('roadmap')} className="btn btn-primary">See my AI roadmap</a>
             <a href={hrefFor('resume')} className="btn btn-secondary">Download my resume</a>
