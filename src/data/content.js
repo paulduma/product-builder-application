@@ -9,15 +9,15 @@ export const config = {
 export const contact = {
   email: 'paul.dumas9@gmail.com',
   phone: '07 77 34 84 90',
-  linkedin: '[LinkedIn URL placeholder]',
-  github: '[GitHub URL placeholder]',
+  linkedin: 'https://www.linkedin.com/in/paul-dumas-b0b9b814b/',
+  github: 'https://github.com/paulduma',
 };
 
 export const pages = [
   { key: 'home', label: 'Home' },
   { key: 'roadmap', label: 'AI Roadmap' },
   { key: 'resume', label: 'Resume' },
-  { key: 'contact', label: 'Contact' },
+  { key: 'contact', label: 'Contact', inNav: false }, // reached via the "Get in touch" button
 ];
 
 export const pathSteps = [

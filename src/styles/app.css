@@ -322,7 +322,7 @@ main.container { flex: 1; }
   display: flex; align-items: center; gap: 16px;
   background: var(--color-neutral-100); border-radius: 24px; padding: 16px 20px; box-shadow: var(--shadow-sm);
 }
-.contact-card:hover { box-shadow: var(--shadow-md); background: #fff; }
+.contact-card:hover { box-shadow: var(--shadow-md); background: #fff; color: inherit; text-decoration: none; }
 .contact-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .contact-icon {
   width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
@@ -331,3 +331,20 @@ main.container { flex: 1; }
 .contact-text { flex: 1; min-width: 0; }
 .contact-label { display: block; font-size: 13px; font-weight: 600; color: var(--color-neutral-700); }
 .contact-value { display: block; font-weight: 700; font-size: 16px; overflow-wrap: anywhere; }
+/* Trailing action hint: copy / open-in-new-tab icon, turning into a check once copied. */
+.contact-action {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  display: grid; place-items: center;
+  border: 1px solid var(--color-accent); color: var(--color-accent);
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.contact-card:hover .contact-action { background: var(--color-accent-100); }
+.contact-action.is-done,
+.contact-card:hover .contact-action.is-done {
+  background: var(--color-accent-2-100); color: var(--color-accent-2-800); border-color: transparent;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { config, contact, pages } from './data/content.js';
 import useReveal from './useReveal.js';
-import { hrefFor, noop } from './nav.js';
+import { hrefFor } from './nav.js';
 import { GithubIcon, LinkedinIcon, MailIcon } from './components/Icons.jsx';
 import Home from './pages/Home.jsx';
 import Roadmap from './pages/Roadmap.jsx';
@@ -37,7 +37,7 @@ export default function App() {
             <span className="brand-dot" aria-hidden="true" />Paul Dumas
           </a>
           <div className="nav-links">
-            {pages.map((p) => (
+            {pages.filter((p) => p.inNav !== false).map((p) => (
               <a key={p.key} href={hrefFor(p.key)} className="nav-link"
                 aria-current={page === p.key ? 'page' : undefined}>
                 {p.label}
@@ -58,9 +58,9 @@ export default function App() {
       <footer className="site-footer container">
         <p>Built with curiosity, coffee and a few AI agents.</p>
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/paul-dumas-b0b9b814b/" onClick={noop} aria-label="LinkedIn (placeholder)" className="social-link"><LinkedinIcon size={18} /></a>
-          <a href="https://github.com/paulduma" onClick={noop} aria-label="GitHub (placeholder)" className="social-link"><GithubIcon size={18} /></a>
-          <a href="mailto:paul.dumas9@gmail.com" aria-label="Email" className="social-link"><MailIcon size={18} /></a>
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-link"><LinkedinIcon size={18} /></a>
+          <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-link"><GithubIcon size={18} /></a>
+          <a href={`mailto:${contact.email}`} aria-label="Email" className="social-link"><MailIcon size={18} /></a>
         </div>
       </footer>
     </div>
