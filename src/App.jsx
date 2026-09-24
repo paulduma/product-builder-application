@@ -58,9 +58,9 @@ export default function App() {
       <footer className="site-footer container">
         <p>Built with curiosity, coffee and a few AI agents.</p>
         <div className="social-links">
-          <a href="#" onClick={noop} aria-label="LinkedIn (placeholder)" className="social-link"><LinkedinIcon size={18} /></a>
-          <a href="#" onClick={noop} aria-label="GitHub (placeholder)" className="social-link"><GithubIcon size={18} /></a>
-          <a href={`mailto:${contact.email}`} aria-label="Email" className="social-link"><MailIcon size={18} /></a>
+          <a href="https://www.linkedin.com/in/paul-dumas-b0b9b814b/" onClick={noop} aria-label="LinkedIn (placeholder)" className="social-link"><LinkedinIcon size={18} /></a>
+          <a href="https://github.com/paulduma" onClick={noop} aria-label="GitHub (placeholder)" className="social-link"><GithubIcon size={18} /></a>
+          <a href="mailto:paul.dumas9@gmail.com" aria-label="Email" className="social-link"><MailIcon size={18} /></a>
         </div>
       </footer>
     </div>

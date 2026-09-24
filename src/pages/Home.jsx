@@ -1,6 +1,7 @@
 import { config, pathSteps } from '../data/content.js';
 import Placeholder from '../components/Placeholder.jsx';
 import { hrefFor, noop } from '../nav.js';
+import handshake from '../assets/paul-shaking-hands.png';
 
 export default function Home() {
   return (
@@ -20,9 +21,12 @@ export default function Home() {
         <div data-reveal className="art">
           <div className="blob" style={{ width: '46%', background: 'var(--color-accent-200)', right: '-4%', top: '-8%' }} />
           <div className="blob" style={{ width: '22%', background: 'var(--color-accent-2-300)', left: '-3%', bottom: '-4%' }} />
-          <Placeholder tone="sage" style={{ aspectRatio: '5 / 4', borderRadius: '64px 64px 64px 160px', padding: 32 }}>
-            [Image to generate later: Paul shaking hands with a friendly character]
-          </Placeholder>
+          <div className="hero-art">
+            <img
+              src={handshake}
+              alt="Paul shaking hands with a friendly character"
+            />
+          </div>
         </div>
       </section>
 

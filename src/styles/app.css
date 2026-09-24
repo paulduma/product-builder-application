@@ -97,6 +97,16 @@ main.container { flex: 1; }
 .hero { gap: clamp(32px, 5vw, 72px); padding-block: clamp(48px, 8vw, 104px) clamp(56px, 8vw, 112px); }
 .split--last { padding-bottom: clamp(64px, 9vw, 120px); }
 
+.hero-art {
+  position: relative; z-index: 1; width: 100%; aspect-ratio: 5 / 4;
+  overflow: hidden; border-radius: 64px 64px 64px 160px; box-shadow: var(--shadow-md);
+}
+.hero-art img {
+  position: absolute; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 48%;
+  transform: scale(1.18); transform-origin: 50% 48%;
+}
+
 .hero h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.06; margin: 0; letter-spacing: -0.01em; }
 .hero h1 span { display: block; }
 .hero h1 .hello { color: var(--color-accent-600); }
@@ -164,6 +174,11 @@ main.container { flex: 1; }
 .resume-head { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; justify-content: space-between; }
 .resume-head > div { max-width: 760px; }
 .resume-sub { font-size: 20px; line-height: 1.5; margin: 14px 0 0; color: var(--color-neutral-800); }
+.resume-sub-alt { color: var(--color-neutral-700); }
+.resume-contact { font-size: 15px; font-weight: 600; margin: 8px 0 0; color: var(--color-neutral-700); }
+
+.about { max-width: 760px; margin-top: 40px; }
+.about p { font-size: 17px; line-height: 1.65; margin: 0; }
 .btn-download { display: inline-flex; align-items: center; gap: 8px; }
 
 .resume-body { display: flex; flex-wrap: wrap; gap: clamp(32px, 4vw, 56px); margin-top: 56px; align-items: flex-start; }
@@ -190,16 +205,16 @@ main.container { flex: 1; }
 }
 .metric-value { font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-2-700); }
 .metric-label { font-size: 13px; font-weight: 600; color: var(--color-neutral-800); }
+/* A role can hold several phases (e.g. a promotion); each after the first gets a divider. */
+.phase { margin-top: 18px; }
+.phase + .phase { padding-top: 22px; border-top: 1px solid var(--color-divider); }
+.phase-head { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+.phase-head h4 { font-family: var(--font-body); font-weight: 700; font-size: 17px; letter-spacing: 0; margin: 0; }
+.phase-intro { font-size: 15.5px; line-height: 1.55; margin: 0; color: var(--color-neutral-800); }
+.phase .metrics { margin-top: 14px; }
+.phase .bullets { margin-top: 14px; }
 .bullets { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .bullets li { display: flex; gap: 12px; font-size: 15.5px; line-height: 1.55; }
-
-.experience-node--earlier { top: 22px; background: var(--color-neutral-400); }
-.earlier {
-  background: var(--color-neutral-200); border-radius: var(--radius-lg); padding: 18px 24px;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.earlier-row { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; font-size: 15.5px; }
-.earlier-row .year { color: var(--color-neutral-700); font-weight: 600; font-size: 14px; }
 
 .resume-aside {
   flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 20px;
@@ -214,8 +229,15 @@ main.container { flex: 1; }
 .education-school { font-weight: 700; font-size: 15.5px; }
 .education-meta { font-size: 14px; color: var(--color-accent-2-800); }
 .panel .row { gap: 8px; }
+.skill-groups { display: flex; flex-direction: column; gap: 16px; }
+.skill-label {
+  font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700;
+  color: var(--color-neutral-700); margin-bottom: 8px;
+}
+.skill-text { font-size: 15px; }
+.skill-note { font-size: 14px; line-height: 1.5; margin: 0; color: var(--color-neutral-700); }
 .interests { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
-.interests li { display: flex; gap: 10px; }
+.interests li { display: flex; gap: 10px; line-height: 1.5; }
 .interests .bullet-dot { margin-top: 7px; }
 
 /* — contact — */

@@ -53,65 +53,103 @@ export const roadmapColumns = [
   },
 ];
 
+// — Resume —
+
+export const resume = {
+  title: 'Product Manager — AI & Data',
+  subtitle: 'Product Builder (PM/PO)',
+  location: 'Bordeaux, France',
+  about: 'Product Manager with 5+ years across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I turn ambitious visions into shipped products, and build AI-first tools and agents that help sales, ops and product teams work faster.',
+};
+
+// Each role can hold several phases (e.g. a promotion within the same company).
 export const experience = [
   {
-    role: 'Product Manager, Acquisition & KYC', company: 'Betclic', location: 'Bordeaux', dates: '2025 – present',
+    role: 'Data Product Owner → Product Manager', company: 'Betclic', location: 'Bordeaux', dates: '2023 – present',
     dot: 'var(--color-accent)',
-    metrics: [],
-    bullets: [
-      '[Placeholder] Own the acquisition & KYC funnel end-to-end, from sign-up to verified account.',
-      '[Placeholder] Impact bullet with a key metric.',
-      '[Placeholder] Impact bullet on cross-team delivery.',
-    ],
-  },
-  {
-    role: 'Data Product Manager, Responsible Gaming', company: 'Betclic', location: 'Bordeaux', dates: '2023 – 2025',
-    dot: 'var(--color-accent)',
-    metrics: [
-      { v: '3×', l: 'cases & accuracy vs 2023' },
-      { v: '7', l: 'person data squad' },
-      { v: 'All', l: 'operating countries' },
-    ],
-    bullets: [
-      'Led a 7-person data squad (analysts, scientists, engineers); built product vision & data strategy aligned with OKRs.',
-      'Shipped an end-to-end detection & protection system for at-risk players — ML models + rule-based alerts in an in-house backoffice.',
-      'Automated actions and user-facing features, deployed in all operating countries.',
+    phases: [
+      {
+        title: 'Product Manager, Identity', dates: '2026',
+        intro: 'Promoted to Product Manager: driving 3 squads (Data, Back, Front) with designers, aligned with directors via dedicated routines.',
+        metrics: [
+          { v: '3', l: 'squads' },
+          { v: '~½', l: 'sign-up journey length' },
+        ],
+        bullets: [
+          'Reshaping the sign-up funnel with external bank-provider integrations: journey cut by ~half, higher verified-account conversion.',
+          'Own the customer lifecycle (account creation, AML & fraud screening, personal details) incl. an account-linking strategy (business rules + AI).',
+          'Shipped an internal AI product-OS (Claude skills & prompts, agents, workflows) to boost productivity of all PMs, and ran training sessions to drive adoption.',
+        ],
+      },
+      {
+        title: 'Data Product Owner, Responsible Gaming', dates: '2023 – 2026',
+        intro: 'Led a 7-person Data & AI squad (analysts, scientists, engineers) for Responsible Gaming.',
+        metrics: [
+          { v: '3×', l: 'review volume & accuracy' },
+          { v: '+25%', l: 'ops productivity' },
+          { v: '7', l: 'person Data & AI squad' },
+        ],
+        bullets: [
+          'Defined the product vision, strategy and OKR-aligned roadmap to protect players and meet regulatory requirements.',
+          'Shipped an end-to-end detection system (ML models + LLMs) on millions of transactions, owning model evaluation: 3× review volume and accuracy.',
+          'Partnered with a 50-person Operations team (scaled from 20): shipped an internal back-office and automated manual workflows (+25% productivity).',
+          'Set up delivery rituals from scratch, and custom dashboards to measure impact and iterate on data-driven insights.',
+        ],
+      },
     ],
   },
   {
     role: 'Strategic Projects Manager', company: 'Cubyn', location: 'Paris', dates: '2021 – 2023',
     dot: 'var(--color-accent-2)',
-    metrics: [
-      { v: '€9M', l: 'fundraise supported' },
-      { v: 'Next40', l: 'scale-up' },
+    phases: [
+      {
+        intro: 'Shaped the Product & Sales strategy of a Next40 logistics scale-up, working closely with all C-levels.',
+        metrics: [
+          { v: '€15M', l: 'Series E supported' },
+          { v: '0', l: 'negative-margin clients' },
+        ],
+        bullets: [
+          'Combined market & competitor analysis, user research and Sales win/loss feedback to prioritize target verticals and the product roadmap.',
+          'Built a live pricing simulator for the Sales team: input client data during sales calls and adjust negotiation margins in real time, for stronger offers.',
+          'Bridged Sales & Product: structured field feedback into a prioritized backlog, and defined company OKRs (2022, 2023) with the CPO & COO.',
+          'Redesigned the pricing strategy (per-client P&L, item-level pricing): zero negative-margin clients; supported a €15M Series E (incl. €9M refinancing).',
+        ],
+      },
     ],
-    bullets: [
-      'Product & business strategy with C-levels; market segmentation & user research feeding the roadmap.',
-      'Bridge between Sales & Product; redesigned pricing to meet margin goals, supporting a €9M fundraise.',
-      'Led internal comms: OKRs, roadmap, All-Hands.',
+  },
+  {
+    role: 'Financial Auditor · Innovation Consultant', company: 'EY · In Extenso', location: 'Paris & Bordeaux', dates: '2021 & 2020',
+    dot: 'var(--color-neutral-400)',
+    phases: [
+      {
+        intro: 'Gained cross-functional expertise in corporate & innovation funding with internships:',
+        metrics: [],
+        bullets: [
+          'Audited financial statements of large French companies, assessed financial and operational risks.',
+          'Advised early-stage tech startups on product strategy, funding research efforts (CIR, CII, JEI…), and preparing innovation contests.',
+        ],
+      },
     ],
   },
 ];
 
-export const earlierRoles = [
-  { role: 'Financial Auditor', company: 'EY', year: '2021' },
-  { role: 'Innovation Consultant', company: 'In Extenso', year: '2020' },
-];
-
 export const education = [
-  { school: 'École Centrale de Lyon', meta: 'Engineering degree · 2017–2021' },
-  { school: 'Prépa MP, Lycée Stanislas', meta: 'Maths & Physics · 2015–2017' },
+  { school: 'École Centrale de Lyon', meta: 'Intrapreneurship & Business Development · 2017–2021' },
+  { school: 'Lycée Stanislas, Paris', meta: 'Preparatory Classes (MP) · 2015–2017' },
+  { school: 'Lycée St-Genès, Bordeaux', meta: 'Bac S (TB) · 2015' },
 ];
 
-export const skills = [
-  ...['SQL', 'Python', 'Tableau', 'Metabase', 'Amplitude'].map((label) => ({ label, cls: 'tag-accent-2' })),
-  ...['HTML/CSS', 'React', 'Node.js'].map((label) => ({ label, cls: 'tag-neutral' })),
-  ...['Cursor', 'Claude', 'Lovable', 'Figma Make'].map((label) => ({ label, cls: 'tag-accent' })),
+export const languages = 'French & English, fully fluent (written & spoken)';
+
+export const skillGroups = [
+  { label: 'AI & building', cls: 'tag-accent', items: ['LLMs', 'Prompt design', 'AI agents', 'MCP connectors', 'RAG', 'Claude Code', 'Cursor', 'Vercel', 'Supabase'] },
+  { label: 'Data', cls: 'tag-accent-2', items: ['SQL', 'Python', 'Tableau', 'Metabase', 'Amplitude'] },
+  { label: 'Product', cls: 'tag-neutral', items: ['Roadmap & prioritization', 'OKRs', 'Discovery', 'Linear', 'Notion'] },
 ];
+
+export const skillsNote = 'Curious and keen on learning, I regularly take new certifications — more on my LinkedIn.';
 
 export const interests = [
-  'French Tech & product culture',
-  'AI side projects',
-  'Competitive rugby, 20+ years',
-  'Trail running',
+  { label: 'Sports', text: 'Rugby in competition (20+ years), Trail' },
+  { label: 'Side Projects', text: 'Building AI-first PWAs (sports planner via LLM API + Google Calendar, recipe planner, RAG-based CV generator), exploring how to move from simple chatbots to proactive AI-first products' },
 ];
