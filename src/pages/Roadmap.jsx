@@ -74,9 +74,9 @@ export default function Roadmap() {
   const shipped = roadmapSteps.filter((s) => s.status === 'done').length;
 
   return (
-    <section className="page" data-screen-label="AI Roadmap">
+    <section className="page" data-screen-label="My AI OS">
       <div data-reveal className="roadmap-intro">
-        <span className="eyebrow">AI Roadmap</span>
+        <span className="eyebrow">My AI OS</span>
         <h1 className="page-title">My AI assistants, built in the open.</h1>
         <p className="page-lede">How AI went from a personal habit to a shared Product OS — and where it's heading next: an autonomous agent my colleagues can simply talk to. Scroll down to follow the journey, one step at a time.</p>
         <div className="journey-summary">

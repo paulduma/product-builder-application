@@ -15,7 +15,7 @@ export const contact = {
 
 export const pages = [
   { key: 'home', label: 'Home' },
-  { key: 'roadmap', label: 'AI Roadmap' },
+  { key: 'roadmap', label: 'My AI OS' },
   { key: 'resume', label: 'Resume' },
   { key: 'contact', label: 'Contact', inNav: false }, // reached via the "Get in touch" button
 ];
@@ -28,7 +28,7 @@ export const pathSteps = [
   { label: 'Betclic · PM Acquisition & KYC', cls: 'tag-accent' },
 ];
 
-// — AI Roadmap —
+// — My AI OS —
 // One step per stage of the journey, top to bottom. `status`: 'done' | 'progress'.
 // Drop an image in src/assets and set `image` (plus `imageAlt`) to replace a step's placeholder.
 
@@ -89,10 +89,10 @@ export const sideBuilds = [
 // — Resume —
 
 export const resume = {
-  title: 'Product Manager — AI & Data',
+  title: 'Product Manager - AI & Data',
   subtitle: 'Product Builder (PM/PO)',
   location: 'Bordeaux, France',
-  about: 'Product Manager with 5+ years across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I turn ambitious visions into shipped products, and build AI-first tools and agents that help sales, ops and product teams work faster.',
+  about: 'Product Manager with 5 years experience across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I turn ambitious visions into shipped products, and build AI-first tools and agents that help sales, ops and product teams work faster.',
 };
 
 // Each role can hold several phases (e.g. a promotion within the same company).

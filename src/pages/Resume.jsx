@@ -41,7 +41,7 @@ export default function Resume() {
           <span className="eyebrow">Resume</span>
           <h1 className="page-title">Paul Dumas</h1>
           <p className="resume-sub">{resume.title} <span className="resume-sub-alt">| {resume.subtitle}</span></p>
-          <p className="resume-contact">{contact.phone} · {contact.email} · {resume.location}</p>
+          {/* <p className="resume-contact">{contact.phone} · {contact.email} · {resume.location}</p> */}
         </div>
         <a href="#" className="btn btn-primary btn-download" onClick={noop}>
           <DownloadIcon size={18} />
