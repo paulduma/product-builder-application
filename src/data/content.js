@@ -79,18 +79,57 @@ export const roadmapSteps = [
 ];
 
 // Smaller builds that sit alongside the main journey.
+// Each one opens `#/build/<key>`. Every page uses the same template (`sideBuildSections`).
+// To write one up, add `sections` on that build — same shape, with a `body` on each.
+// A section with an empty body keeps its placeholder. Drop an image in src/assets and set
+// `image` (plus `imageAlt`) to replace the illustration placeholder.
+export const sideBuildSections = [
+  { title: 'Why I built it', hint: 'The friction this removes, in a few sentences.' },
+  { title: 'How it works', hint: 'The path from a plain-language request to the result.' },
+  { title: 'What I built', hint: 'The pieces: skills, connectors, and where it runs.' },
+  { title: "What's next", hint: 'What is already shipped, and what is still open.' },
+];
+
 export const sideBuilds = [
-  { title: 'Calendar assistant', desc: 'Updates my Google Agenda on request, in plain language.', status: 'done', tags: ['Claude', 'MCP connectors', 'Google Calendar'] },
-  { title: 'Portfolio & interview chatbot', desc: 'Answers recruiters’ questions about my background, grounded in my resume.', status: 'done', tags: ['Claude', 'Prompts', 'RAG'] },
-  { title: 'Recipe planning platform', desc: 'Weekly meal plans with automatic shopping-list generation.', status: 'progress', tags: ['Cursor', 'Claude', 'React'] },
-  { title: 'Output evaluation & prompt versioning', desc: 'Test sets and scoring so every prompt change is measured, not guessed.', status: 'progress', tags: ['Evals', 'Prompts', 'Python'] },
+  {
+    key: 'calendar-assistant',
+    title: 'Calendar assistant',
+    desc: 'Updates my Google Agenda on request, in plain language.',
+    status: 'done',
+    tags: ['Claude', 'MCP connectors', 'Google Calendar'],
+    illustration: 'A calendar page rewriting itself from one short sentence',
+  },
+  {
+    key: 'portfolio-chatbot',
+    title: 'Portfolio & interview chatbot',
+    desc: 'Answers recruiters’ questions about my background, grounded in my resume.',
+    status: 'done',
+    tags: ['Claude', 'Prompts', 'RAG'],
+    illustration: 'A small chatbot answering questions from a resume, sitting on a desk',
+  },
+  {
+    key: 'recipe-planner',
+    title: 'Recipe planning platform',
+    desc: 'Weekly meal plans with automatic shopping-list generation.',
+    status: 'progress',
+    tags: ['Cursor', 'Claude', 'React'],
+    illustration: 'A weekly meal grid turning into a shopping list on the fridge',
+  },
+  {
+    key: 'output-evals',
+    title: 'Output evaluation & prompt versioning',
+    desc: 'Test sets and scoring so every prompt change is measured, not guessed.',
+    status: 'progress',
+    tags: ['Evals', 'Prompts', 'Python'],
+    illustration: 'Prompt cards on a shelf, each with a score, the newest one highlighted',
+  },
 ];
 
 // — Resume —
 
 export const resume = {
-  title: 'Product Manager - AI & Data',
-  subtitle: 'Product Builder (PM/PO)',
+  title: 'Product Manager',
+  subtitle: 'AI & Data',
   location: 'Bordeaux, France',
   about: 'Product Manager with 5 years experience across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I turn ambitious visions into shipped products, and build AI-first tools and agents that help sales, ops and product teams work faster.',
 };
@@ -98,12 +137,12 @@ export const resume = {
 // Each role can hold several phases (e.g. a promotion within the same company).
 export const experience = [
   {
-    role: 'Data Product Owner → Product Manager', company: 'Betclic', location: 'Bordeaux', dates: '2023 – present',
+    role: 'Product Builder', company: 'Betclic', location: 'Bordeaux', dates: '2023 – present',
     dot: 'var(--color-accent)',
     phases: [
       {
         title: 'Product Manager, Identity', dates: '2026',
-        intro: 'Promoted to Product Manager: driving 3 squads (Data, Back, Front) with designers, aligned with directors via dedicated routines.',
+        intro: 'Shaping a frictionless onboarding journey, for users to comply with high regulatory requirements in the easiest way',
         metrics: [
           { v: '3', l: 'squads' },
           { v: '~½', l: 'sign-up journey length' },
@@ -156,7 +195,7 @@ export const experience = [
     phases: [
       {
         intro: 'Gained cross-functional expertise in corporate & innovation funding with internships:',
-        metrics: [],
+        metrics: [], 
         bullets: [
           'Audited financial statements of large French companies, assessed financial and operational risks.',
           'Advised early-stage tech startups on product strategy, funding research efforts (CIR, CII, JEI…), and preparing innovation contests.',

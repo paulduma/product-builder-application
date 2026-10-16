@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { config, contact, pages } from './data/content.js';
+import { config, contact, pages, sideBuilds } from './data/content.js';
 import useReveal from './useReveal.js';
 import { hrefFor } from './nav.js';
 import { GithubIcon, LinkedinIcon, MailIcon } from './components/Icons.jsx';
@@ -7,27 +7,33 @@ import Home from './pages/Home.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 import Resume from './pages/Resume.jsx';
 import Contact from './pages/Contact.jsx';
+import SideBuild from './pages/SideBuild.jsx';
 
 const PAGE_KEYS = pages.map((p) => p.key);
+const BUILD_KEYS = new Set(sideBuilds.map((b) => b.key));
 
-function pageFromHash() {
-  const key = window.location.hash.replace(/^#\/?/, '');
-  return PAGE_KEYS.includes(key) ? key : 'home';
+function routeFromHash() {
+  const raw = window.location.hash.replace(/^#\/?/, '').replace(/\/$/, '');
+  if (PAGE_KEYS.includes(raw)) return { page: raw, buildKey: '' };
+  const buildKey = raw.startsWith('build/') ? raw.slice('build/'.length) : '';
+  if (buildKey && BUILD_KEYS.has(buildKey)) return { page: 'build', buildKey };
+  return { page: 'home', buildKey: '' };
 }
 
 export default function App() {
-  const [page, setPage] = useState(pageFromHash);
+  const [route, setRoute] = useState(routeFromHash);
+  const { page, buildKey } = route;
 
   useEffect(() => {
     const onHash = () => {
-      setPage(pageFromHash());
+      setRoute(routeFromHash());
       window.scrollTo({ top: 0, behavior: 'auto' });
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
-  useReveal(page, config.animations);
+  useReveal(`${page}:${buildKey}`, config.animations);
 
   return (
     <div className="shell">
@@ -39,7 +45,7 @@ export default function App() {
           <div className="nav-links">
             {pages.filter((p) => p.inNav !== false).map((p) => (
               <a key={p.key} href={hrefFor(p.key)} className="nav-link"
-                aria-current={page === p.key ? 'page' : undefined}>
+                aria-current={page === p.key || (page === 'build' && p.key === 'roadmap') ? 'page' : undefined}>
                 {p.label}
               </a>
             ))}
@@ -53,6 +59,7 @@ export default function App() {
         {page === 'roadmap' && <Roadmap />}
         {page === 'resume' && <Resume />}
         {page === 'contact' && <Contact />}
+        {page === 'build' && <SideBuild buildKey={buildKey} />}
       </main>
 
       <footer className="site-footer container">

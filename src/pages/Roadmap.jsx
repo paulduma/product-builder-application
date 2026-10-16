@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { roadmapSteps, sideBuilds } from '../data/content.js';
+import { hrefFor } from '../nav.js';
 import Placeholder from '../components/Placeholder.jsx';
 
 // Visual rhythm for the steps: frame shapes, tints and decorative blobs cycle like on the home page.
@@ -119,7 +120,7 @@ export default function Roadmap() {
         </div>
         <div className="side-builds-grid">
           {sideBuilds.map((b) => (
-            <article key={b.title} data-reveal className="roadmap-card">
+            <a key={b.key} data-reveal href={hrefFor(`build/${b.key}`)} className="roadmap-card">
               <div className="roadmap-card-head">
                 <h4>{b.title}</h4>
                 <span className={`tag ${STATUS[b.status].cls}`}>{STATUS[b.status].label}</span>
@@ -128,7 +129,8 @@ export default function Roadmap() {
               <div className="row">
                 {b.tags.map((t) => <span key={t} className="tag tag-neutral">{t}</span>)}
               </div>
-            </article>
+              <span className="roadmap-card-open">Open →</span>
+            </a>
           ))}
         </div>
       </div>

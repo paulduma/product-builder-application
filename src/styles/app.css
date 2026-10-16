@@ -221,13 +221,15 @@ main.container { flex: 1; }
 .side-builds { margin-top: clamp(48px, 7vw, 96px); }
 .side-builds-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 16px; align-items: start;
+  gap: 16px; align-items: stretch;
 }
 .roadmap-card {
+  display: flex; flex-direction: column; height: 100%;
   background: var(--color-neutral-100); border-radius: 20px; padding: 18px 18px 16px;
-  box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: var(--shadow-sm); color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.roadmap-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+a.roadmap-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); color: inherit; text-decoration: none; }
 .roadmap-card-head { display: flex; align-items: flex-start; gap: 10px; justify-content: space-between; }
 .roadmap-card h4 {
   font-family: var(--font-body); font-weight: 700; font-size: 16px; line-height: 1.35;
@@ -236,6 +238,56 @@ main.container { flex: 1; }
 .roadmap-card .tag { flex-shrink: 0; }
 .roadmap-card p { font-size: 14.5px; line-height: 1.5; margin: 8px 0 14px; color: var(--color-neutral-800); }
 .roadmap-card .row { gap: 6px; }
+.roadmap-card-open {
+  margin-top: auto; padding-top: 14px;
+  font-size: 14px; font-weight: 700; color: var(--color-accent-700);
+}
+
+/* — side-build pages — */
+.back-link {
+  display: inline-flex; align-items: center; margin-bottom: 28px;
+  font-weight: 700; font-size: 15px; color: var(--color-text);
+}
+.back-link:hover { color: var(--color-accent-800); text-decoration: none; }
+.build-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+.build-kicker .eyebrow { margin-bottom: 0; }
+.build-hero {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  align-items: center; gap: clamp(32px, 5vw, 72px);
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.build-tags { margin-top: 24px; gap: 6px; }
+.build-art { max-width: 520px; width: 100%; }
+.build-sections {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px; align-items: stretch;
+}
+.build-section {
+  background: var(--color-neutral-100); border-radius: 20px; padding: 22px;
+  box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px;
+}
+.build-section h2 { font-size: 22px; margin: 0; }
+.build-section p { font-size: 16px; line-height: 1.6; margin: 0; color: var(--color-neutral-800); }
+.build-slot {
+  flex: 1; text-align: left; place-items: start; align-content: start;
+  min-height: 108px; padding: 16px 18px; border-radius: 16px; font-size: 14.5px;
+}
+.build-pager {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+  margin-top: clamp(36px, 5vw, 64px);
+}
+.build-pager-link {
+  display: flex; flex-direction: column; gap: 4px; min-width: min(100%, 240px);
+  background: var(--color-neutral-100); border-radius: 20px; padding: 16px 18px;
+  box-shadow: var(--shadow-sm); color: inherit;
+}
+.build-pager-link:hover { box-shadow: var(--shadow-md); color: inherit; text-decoration: none; }
+.build-pager-link--next { margin-left: auto; text-align: right; }
+.build-pager-label {
+  font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700;
+  color: var(--color-accent-700);
+}
+.build-pager-title { font-weight: 700; font-size: 16px; }
 
 /* — resume — */
 .resume-head { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; justify-content: space-between; }
