@@ -74,48 +74,48 @@ export default function Resume() {
           </div>
         </div>
 
-        <aside className="resume-aside">
-          <div data-reveal className="panel panel--sage">
-            <h3>Education</h3>
-            <div className="education">
-              {education.map((e) => (
-                <div key={e.school}>
-                  <div className="education-school">{e.school}</div>
-                  <div className="education-meta">{e.meta}</div>
-                </div>
-              ))}
+        <div data-reveal className="panel panel--neutral resume-skills">
+          <h3>Skills</h3>
+          <div className="skill-groups">
+            <div>
+              <div className="skill-label">Languages</div>
+              <div className="skill-text">{languages}</div>
             </div>
-          </div>
-          <div data-reveal className="panel panel--neutral">
-            <h3>Skills</h3>
-            <div className="skill-groups">
-              <div>
-                <div className="skill-label">Languages</div>
-                <div className="skill-text">{languages}</div>
+            {skillGroups.map((g) => (
+              <div key={g.label}>
+                <div className="skill-label">{g.label}</div>
+                <div className="row">
+                  {g.items.map((s) => <span key={s} className={`tag ${g.cls}`}>{s}</span>)}
+                </div>
               </div>
-              {skillGroups.map((g) => (
-                <div key={g.label}>
-                  <div className="skill-label">{g.label}</div>
-                  <div className="row">
-                    {g.items.map((s) => <span key={s} className={`tag ${g.cls}`}>{s}</span>)}
-                  </div>
-                </div>
-              ))}
-              <p className="skill-note">{skillsNote}</p>
-            </div>
+            ))}
+            <p className="skill-note">{skillsNote}</p>
           </div>
-          <div data-reveal className="panel panel--terracotta">
-            <h3>Other interests</h3>
-            <ul className="interests">
-              {interests.map((i) => (
-                <li key={i.label}>
-                  <span className="bullet-dot" aria-hidden="true" />
-                  <span><strong>{i.label}</strong> — {i.text}</span>
-                </li>
-              ))}
-            </ul>
+        </div>
+
+        <div data-reveal className="panel panel--sage resume-education">
+          <h3>Education</h3>
+          <div className="education">
+            {education.map((e) => (
+              <div key={e.school}>
+                <div className="education-school">{e.school}</div>
+                <div className="education-meta">{e.meta}</div>
+              </div>
+            ))}
           </div>
-        </aside>
+        </div>
+
+        <div data-reveal className="panel panel--terracotta resume-interests">
+          <h3>Other interests</h3>
+          <ul className="interests">
+            {interests.map((i) => (
+              <li key={i.label}>
+                <span className="bullet-dot" aria-hidden="true" />
+                <span><strong>{i.label}</strong> — {i.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

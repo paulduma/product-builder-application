@@ -300,8 +300,34 @@ a.roadmap-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md)
 .about p { font-size: 17px; line-height: 1.65; margin: 0; }
 .btn-download { display: inline-flex; align-items: center; gap: 8px; }
 
-.resume-body { display: flex; flex-wrap: wrap; gap: clamp(32px, 4vw, 56px); margin-top: 56px; align-items: flex-start; }
-.experience { flex: 2 1 520px; min-width: 0; position: relative; padding-left: 36px; }
+/* Experience spans the skills + education row. Skills is the wide column, education
+   sits on its right, and interests runs the full width beneath both. */
+.resume-body {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  grid-template-areas:
+    "experience experience"
+    "skills education"
+    "interests interests";
+  column-gap: clamp(20px, 3vw, 40px);
+  row-gap: clamp(28px, 4vw, 48px);
+  margin-top: 56px;
+  align-items: start;
+}
+.experience { grid-area: experience; min-width: 0; position: relative; padding-left: 36px; }
+.resume-skills { grid-area: skills; margin-left: 36px; }
+.resume-education { grid-area: education; }
+.resume-interests { grid-area: interests; margin-left: 36px; }
+@media (max-width: 760px) {
+  .resume-body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "experience"
+      "skills"
+      "education"
+      "interests";
+  }
+}
 .experience-rail {
   position: absolute; left: 9px; top: 12px; bottom: 12px; width: 3px; border-radius: 3px;
   background: var(--color-neutral-300);
@@ -335,10 +361,6 @@ a.roadmap-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md)
 .bullets { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .bullets li { display: flex; gap: 12px; font-size: 15.5px; line-height: 1.55; }
 
-.resume-aside {
-  flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 20px;
-  position: sticky; top: 96px;
-}
 .panel { border-radius: var(--radius-lg); padding: 24px; }
 .panel h3 { font-size: 22px; margin: 0 0 16px; }
 .panel--sage { background: var(--color-accent-2-100); }
