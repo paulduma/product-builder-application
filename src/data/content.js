@@ -141,31 +141,30 @@ export const experience = [
     dot: 'var(--color-accent)',
     phases: [
       {
-        title: 'Product Manager, Identity', dates: '2026',
-        intro: 'Shaping a frictionless onboarding journey, for users to comply with high regulatory requirements in the easiest way',
+        title: 'Product Manager, Account Management', dates: '2026',
+        intro: 'Promoted to the Account Management Product Team, leading topics for 3 squads (data, back & front).',
         metrics: [
           { v: '3', l: 'squads' },
-          { v: '~½', l: 'sign-up journey length' },
         ],
         bullets: [
-          'Reshaping the sign-up funnel with external bank-provider integrations: journey cut by ~half, higher verified-account conversion.',
-          'Own the customer lifecycle (account creation, AML & fraud screening, personal details) incl. an account-linking strategy (business rules + AI).',
-          'Shipped an internal AI product-OS (Claude skills & prompts, agents, workflows) to boost productivity of all PMs, and ran training sessions to drive adoption.',
+          'Currently reshaping the full registration funnel, to increase the share of trusted and verified accounts, using integration with external providers.',
+          'Own the full customer lifecycle and statuses: account creation, AML & fraud screening, and personal details management, along with Ops teams.',
+          'Shipped an internal AI product-os (Claude skills, agentic workflows) to boost productivity of all PMs, and ran training sessions to drive adoption.',
         ],
       },
       {
         title: 'Data Product Owner, Responsible Gaming', dates: '2023 – 2026',
-        intro: 'Led a 7-person Data & AI squad (analysts, scientists, engineers) for Responsible Gaming.',
+        intro: 'Led a 7-person Data & AI squad for Responsible Gaming Strategy & Operations.',
         metrics: [
-          { v: '3×', l: 'review volume & accuracy' },
+          { v: '3×', l: 'review volume' },
+          { v: '3×', l: 'AI alert accuracy' },
           { v: '+25%', l: 'ops productivity' },
-          { v: '7', l: 'person Data & AI squad' },
         ],
         bullets: [
-          'Defined the product vision, strategy and OKR-aligned roadmap to protect players and meet regulatory requirements.',
-          'Shipped an end-to-end detection system (ML models + LLMs) on millions of transactions, owning model evaluation: 3× review volume and accuracy.',
-          'Partnered with a 50-person Operations team (scaled from 20): shipped an internal back-office and automated manual workflows (+25% productivity).',
-          'Set up delivery rituals from scratch, and custom dashboards to measure impact and iterate on data-driven insights.',
+          'Built the data product vision and strategy, to protect players and meet regulatory requirements, aligned with scaling ambitions.',
+          'Delivered a full detection and protection system, shipping ML & LLMs to analyze millions of transactions. Multiplied the volume of reviews by 3.',
+          'Worked closely with Ops teams (50 people) on an internal back-office with automated actions (+25% productivity), and on evaluating AI alerts accuracy (multiplied by 3 in 2 years).',
+          'Delivered continuous data-driven insights and tools to track performance.',
         ],
       },
     ],
@@ -175,16 +174,15 @@ export const experience = [
     dot: 'var(--color-accent-2)',
     phases: [
       {
-        intro: 'Shaped the Product & Sales strategy of a Next40 logistics scale-up, working closely with all C-levels.',
+        intro: 'Developed the Product & Business strategy for a Next40 company, working closely with all C-levels.',
         metrics: [
-          { v: '€15M', l: 'Series E supported' },
-          { v: '0', l: 'negative-margin clients' },
+          { v: '€9M', l: 'funding secured' },
         ],
         bullets: [
-          'Combined market & competitor analysis, user research and Sales win/loss feedback to prioritize target verticals and the product roadmap.',
-          'Built a live pricing simulator for the Sales team: input client data during sales calls and adjust negotiation margins in real time, for stronger offers.',
-          'Bridged Sales & Product: structured field feedback into a prioritized backlog, and defined company OKRs (2022, 2023) with the CPO & COO.',
-          'Redesigned the pricing strategy (per-client P&L, item-level pricing): zero negative-margin clients; supported a €15M Series E (incl. €9M refinancing).',
+          'Identified key market segments and opportunities with quantitative analysis and user research, to build the product roadmap, the OKRs, and support growth.',
+          'Built a live pricing simulator for the Sales team, to negotiate margins in real time. Also contributed to building tailored offers and winning deals.',
+          'Bridged the gap between Sales & Product to prioritize key features, and track Sales Operations metrics.',
+          'Redesigned the whole pricing strategy to meet margin goals, and translated it into the financial budget and forecasts, to secure a new €9M funding.',
         ],
       },
     ],
