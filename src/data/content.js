@@ -128,10 +128,10 @@ export const sideBuilds = [
 // — Resume —
 
 export const resume = {
-  title: 'Product Manager',
+  title: 'Product Builder',
   subtitle: 'AI & Data',
   location: 'Bordeaux, France',
-  about: 'Product Manager with 5 years experience across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I turn ambitious visions into shipped products, and build AI-first tools and agents that help sales, ops and product teams work faster.',
+  about: 'Product Manager with 5+ years experience across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I thrive on turning ambitious visions into concrete solutions and building AI-first tools.I love the 0 to 1 energy, building things from scratch and pushing beyond my scope.',
 };
 
 // Each role can hold several phases (e.g. a promotion within the same company).
@@ -141,29 +141,29 @@ export const experience = [
     dot: 'var(--color-accent)',
     phases: [
       {
-        title: 'Product Manager, Account Management', dates: '2026',
-        intro: 'Promoted to the Account Management Product Team, leading topics for 3 squads (data, back & front).',
+        title: 'Product Manager, Account Management',
+        intro: 'Leading transverse topics around Identity verification and Account Management.',
         metrics: [
-          { v: '3', l: 'squads' },
+          { v: '', l: 'Bridging the gap between Product, Operations, Acquisition and Compliance teams' },
         ],
         bullets: [
-          'Currently reshaping the full registration funnel, to increase the share of trusted and verified accounts, using integration with external providers.',
-          'Own the full customer lifecycle and statuses: account creation, AML & fraud screening, and personal details management, along with Ops teams.',
-          'Shipped an internal AI product-os (Claude skills, agentic workflows) to boost productivity of all PMs, and ran training sessions to drive adoption.',
+          'Currently reshaping the full registration funnel, to increase the Verified accounts Conversion using integration with banks and other external providers.',
+          'Owned the full customer lifecycle, providing a clear audit trail of main events from account creation, to KYC validation and AML or fraud screening.',
+          'Shipped an internal AI product-os (mixing Claude skills, agentic workflows and tools) to boost productivity of all PMs, and ran training sessions to drive adoption.',
         ],
       },
       {
-        title: 'Data Product Owner, Responsible Gaming', dates: '2023 – 2026',
-        intro: 'Led a 7-person Data & AI squad for Responsible Gaming Strategy & Operations.',
+        title: 'Data Product Owner, Responsible Gaming',
+        intro: 'Led a 7 people Data & AI squad, for the Responsible Gaming Strategy & Operations.',
         metrics: [
-          { v: '3×', l: 'review volume' },
-          { v: '3×', l: 'AI alert accuracy' },
-          { v: '+25%', l: 'ops productivity' },
+          { v: '3×', l: 'Volume' },
+          { v: '3×', l: 'Accuracy' },
+          { v: '+25%', l: 'Ops productivity' },
         ],
         bullets: [
-          'Built the data product vision and strategy, to protect players and meet regulatory requirements, aligned with scaling ambitions.',
-          'Delivered a full detection and protection system, shipping ML & LLMs to analyze millions of transactions. Multiplied the volume of reviews by 3.',
-          'Worked closely with Ops teams (50 people) on an internal back-office with automated actions (+25% productivity), and on evaluating AI alerts accuracy (multiplied by 3 in 2 years).',
+          'Built the data product vision and strategy, to protect players and meet regulatory requirements.',
+          'Delivered a full detection system, shipping ML & LLMs to analyze millions of transactions. Multiplied volume of reviews as well as accuracy by 3.',
+          'Worked closely with Ops teams (50 people) on an internal back-office with automated actions (+25% productivity), and on evaluating AI alerts.',
           'Delivered continuous data-driven insights and tools to track performance.',
         ],
       },
@@ -174,15 +174,15 @@ export const experience = [
     dot: 'var(--color-accent-2)',
     phases: [
       {
-        intro: 'Developed the Product & Business strategy for a Next40 company, working closely with all C-levels.',
+        intro: 'Contributed to shaping the Product & Business strategy for a Next40 company, working closely with all C-levels.',
         metrics: [
           { v: '€9M', l: 'funding secured' },
         ],
         bullets: [
-          'Identified key market segments and opportunities with quantitative analysis and user research, to build the product roadmap, the OKRs, and support growth.',
+          'Identified key market segments and opportunities with quantitative analysis and user research, to build the product roadmap and the OKRs.',
           'Built a live pricing simulator for the Sales team, to negotiate margins in real time. Also contributed to building tailored offers and winning deals.',
-          'Bridged the gap between Sales & Product to prioritize key features, and track Sales Operations metrics.',
-          'Redesigned the whole pricing strategy to meet margin goals, and translated it into the financial budget and forecasts, to secure a new €9M funding.',
+          'Bridged the gap between Sales & Product to prioritize key features by impact, and track Sales Operations metrics.',
+          'Redesigned the whole pricing strategy to meet margin goals, and translated it on financial budget & forecasts, supporting a Series D fundraising (15M).',
         ],
       },
     ],

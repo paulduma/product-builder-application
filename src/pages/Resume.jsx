@@ -2,7 +2,7 @@ import {
   contact, education, experience, interests, languages, resume, skillGroups, skillsNote,
 } from '../data/content.js';
 import { DownloadIcon } from '../components/Icons.jsx';
-import { noop } from '../nav.js';
+import cv from '../assets/CV_Paul_Dumas.pdf';
 
 function Phase({ phase }) {
   return (
@@ -43,7 +43,7 @@ export default function Resume() {
           <p className="resume-sub">{resume.title} <span className="resume-sub-alt">| {resume.subtitle}</span></p>
           {/* <p className="resume-contact">{contact.phone} · {contact.email} · {resume.location}</p> */}
         </div>
-        <a href="#" className="btn btn-primary btn-download" onClick={noop}>
+        <a href={cv} download="CV_Paul_Dumas.pdf" className="btn btn-primary btn-download">
           <DownloadIcon size={18} />
           Download PDF
         </a>
