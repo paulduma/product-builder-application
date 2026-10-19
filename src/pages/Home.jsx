@@ -1,6 +1,6 @@
-import { config, pathSteps } from '../data/content.js';
+import { visionPoints } from '../data/content.js';
 import Placeholder from '../components/Placeholder.jsx';
-import { hrefFor, noop } from '../nav.js';
+import { hrefFor } from '../nav.js';
 import verdi from '../assets/verdi.jpg';
 
 export default function Home() {
@@ -34,19 +34,9 @@ export default function Home() {
         <div data-reveal className="prose">
           <span className="eyebrow">My path</span>
           <h2 className="section-title">From engineering school to product</h2>
-          <p>I discovered Product during engineering school — the classic path: preparatory classes in Maths &amp; Physics, then École Centrale de Lyon.</p>
-          <p>I then navigated tech startups and scale-ups in Paris (Cubyn, HelloFresh) as Strategic Projects Manager, close to C-levels and product teams.</p>
-          <p>Back in my hometown, Bordeaux, I became Data Product Manager at Betclic — creating a brand-new Safer Gaming department (7-person data squad, ML-based detection of at-risk players, <strong>3× cases &amp; accuracy</strong>) — and then Product Manager on Acquisition &amp; KYC.</p>
-          {config.showTimeline && (
-            <div className="timeline">
-              {pathSteps.map((s, i) => (
-                <span key={s.label} className="timeline-step">
-                  <span className={`tag ${s.cls}`}>{s.label}</span>
-                  {i < pathSteps.length - 1 && <span className="timeline-arrow" aria-hidden="true">→</span>}
-                </span>
-              ))}
-            </div>
-          )}
+          <p>I discovered Product during engineering school, after preparatory classes in Maths &amp; Physics and École Centrale de Lyon.</p>
+          <p>I then navigated tech startups and scale-ups in Paris (Cubyn, HelloFresh) as Strategic Projects Manager, before becoming a Product Manager at Betclic.</p>
+          <p>Today, I'm looking for a new challenge: building something from scratch, taking my AI skills further, and putting them to work where they move the business. That's exactly what draws me to [Company].</p>
         </div>
         <div data-reveal className="art">
           <div className="blob" style={{ width: '38%', background: 'var(--color-accent-100)', left: '-6%', top: '-6%' }} />
@@ -56,48 +46,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split" data-screen-label="Home · AI side passion">
-        <div data-reveal className="art">
-          <div className="blob" style={{ width: '30%', background: 'var(--color-accent-2-300)', right: '2%', bottom: '-5%' }} />
-          <Placeholder tone="sage" style={{ aspectRatio: '5 / 4', maxWidth: 520, borderRadius: '160px 64px 64px 64px', padding: 40 }}>
-            [Illustration placeholder: Paul at a laptop, a chef's hat and a code editor side by side]
-          </Placeholder>
-        </div>
-        <div data-reveal className="prose">
-          <span className="eyebrow eyebrow--sage">My side passion</span>
+      <section className="vision" data-screen-label="Home · My AI vision">
+        <div data-reveal className="prose vision-intro">
+          <span className="eyebrow eyebrow--sage">My AI vision</span>
           <h2 className="section-title">AI, for everything and anything. Build, build, build.</h2>
-          <p style={{ maxWidth: '54ch' }}>My personal setup: Cursor + Claude (paid plans), used to build other products in my free time. Because let's be honest — what PM has never tried to build their own cooking app?</p>
-          <div className="card app-card">
-            <div className="app-card-text">
-              <div className="app-card-title">My recipe app</div>
-              <div className="app-card-sub">Meal planning + shopping lists · links are placeholders</div>
+          <p>To me, AI isn't a tool you open once in a while. It's a layer across everything I do, and the best version of it comes to you instead of waiting to be asked.</p>
+        </div>
+        <div className="vision-grid">
+          {visionPoints.map((v) => (
+            <div key={v.kicker} data-reveal className={`card vision-card${v.highlight ? ' vision-card--highlight' : ''}`}>
+              <span className="card-kicker">{v.kicker}</span>
+              <h3 className="card-title">{v.title}</h3>
+              <p className="card-body">{v.body}</p>
             </div>
-            <div className="row">
-              <a href="#" className="btn btn-primary" onClick={noop}>Try my recipe app</a>
-              <a href="#" className="btn btn-ghost" onClick={noop}>Watch the demo</a>
-            </div>
+          ))}
+        </div>
+        <div data-reveal className="card app-card">
+          <div className="app-card-text">
+            <div className="app-card-title">My AI OS at Betclic</div>
+            <div className="app-card-sub">Skills, a plugin and agents I built for the Product tribe</div>
           </div>
-          <div className="sticky-note">
-            <strong>PS</strong>My backlog is full: sommelier app, sports coach app, …
-          </div>
+          <a href={hrefFor('roadmap')} className="btn btn-primary">See my AI OS →</a>
         </div>
       </section>
 
-      <section className="split split--last" data-screen-label="Home · AI at work">
-        <div data-reveal className="prose">
-          <span className="eyebrow">AI at work</span>
-          <h2 className="section-title">And AI at work</h2>
-          <p>My latest work: designing and building a setup of AI agents and making it available to my colleagues, so they can use it in their daily workflows.</p>
-          <p>It's a topic I truly love — and it echoes strongly with how I see the future of sales teams: moving from <strong>pull-based tools</strong> to <strong>proactive AI assistants</strong> that surface the right action at the right time.</p>
-          <div style={{ marginTop: 28 }}>
-            <a href={hrefFor('roadmap')} className="btn btn-secondary">Learn more →</a>
-          </div>
-        </div>
+      <section className="split split--last" data-screen-label="Home · About this site">
         <div data-reveal className="art">
           <div className="blob" style={{ width: '34%', background: 'var(--color-accent-2-200)', right: '-4%', top: '-8%' }} />
-          <Placeholder tone="terracotta-soft" style={{ aspectRatio: '5 / 4', maxWidth: 520, marginLeft: 'auto', borderRadius: '64px 160px 64px 64px', padding: 40 }}>
-            [Illustration placeholder: friendly assistant characters handing cards to a team]
+          <Placeholder tone="terracotta-soft" style={{ aspectRatio: '5 / 4', maxWidth: 520, borderRadius: '64px 160px 64px 64px', padding: 40 }}>
+            [Illustration placeholder: the builder character waving next to a freshly built website]
           </Placeholder>
+        </div>
+        <div data-reveal className="prose">
+          <span className="eyebrow">About this site</span>
+          <h2 className="section-title">Built quickly, built for you</h2>
+          <p>I built this site in a few days, with my own AI setup, just to apply to [Company]. It's my way of showing how interested I am in the role and in what [Company] stands for: [value 1], [value 2], [value 3].</p>
+          <p>I'd be really happy to connect and talk about the position.</p>
+          <div style={{ marginTop: 28 }}>
+            <a href={hrefFor('contact')} className="btn btn-primary">Get in touch →</a>
+          </div>
         </div>
       </section>
     </>

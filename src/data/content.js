@@ -3,7 +3,6 @@
 // Toggles carried over from the design's editor props.
 export const config = {
   animations: true, // scroll-reveal motion (always off under prefers-reduced-motion)
-  showTimeline: true, // career path chips on the home page
 };
 
 export const contact = {
@@ -20,12 +19,29 @@ export const pages = [
   { key: 'contact', label: 'Contact', inNav: false }, // reached via the "Get in touch" button
 ];
 
-export const pathSteps = [
-  { label: 'Prépa', cls: 'tag-neutral' },
-  { label: 'Centrale Lyon', cls: 'tag-neutral' },
-  { label: 'Cubyn / HelloFresh', cls: 'tag-accent-2' },
-  { label: 'Betclic · Data PM', cls: 'tag-accent' },
-  { label: 'Betclic · PM Acquisition & KYC', cls: 'tag-accent' },
+// — Home · My AI vision — one card each; `highlight` marks the one tailored to the company.
+export const visionPoints = [
+  {
+    kicker: 'Personally',
+    title: 'Learning by shipping',
+    body: 'Cursor + Claude (paid plans) to build side products in my free time: a recipe app, a calendar assistant, and a backlog full of others (sommelier, sports coach…).',
+  },
+  {
+    kicker: 'At work',
+    title: 'An AI OS for a whole Product tribe',
+    body: 'At Betclic, I turned my PM work into shared Claude skills, packaged them as a plugin, trained the team (even the least technical) and am now building agents on top.',
+  },
+  {
+    kicker: 'What I explore',
+    title: 'Agents that live where people work',
+    body: 'Multi-agent setups, connecting AI to real tools (MCP), and moving from chat windows to assistants you reach from Teams or your phone.',
+  },
+  {
+    kicker: 'For [Company]',
+    title: 'A proactive sales funnel',
+    body: "Where I think AI pays off most: assistants that surface the right lead, prep the next call, draft the follow-up and keep the CRM clean. Sales teams move from pull-based tools to the right action at the right time.",
+    highlight: true,
+  },
 ];
 
 // — My AI OS —
