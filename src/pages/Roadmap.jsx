@@ -16,6 +16,7 @@ const BLOBS = [
 const STATUS = {
   done: { label: 'Done', cls: 'tag-accent-2' },
   progress: { label: 'In progress', cls: 'tag-accent' },
+  future: { label: 'The future', cls: 'tag-outline' },
 };
 
 // Fills the thread as the reader scrolls, and lights up each step's node once it's passed.
@@ -72,17 +73,21 @@ export default function Roadmap() {
   const journeyRef = useRef(null);
   useJourneyProgress(journeyRef);
 
-  const shipped = roadmapSteps.filter((s) => s.status === 'done').length;
+  const count = (status) => roadmapSteps.filter((s) => s.status === status).length;
+  const shipped = count('done');
+  const inProgress = count('progress');
+  const upcoming = count('future');
 
   return (
     <section className="page" data-screen-label="My AI OS">
       <div data-reveal className="roadmap-intro">
         <span className="eyebrow">My AI OS</span>
-        <h1 className="page-title">My AI assistants, built in the open.</h1>
-        <p className="page-lede">How AI went from a personal habit to a shared Product OS — and where it's heading next: an autonomous agent my colleagues can simply talk to. Scroll down to follow the journey, one step at a time.</p>
+        <h1 className="page-title">My current approach to AI at work: building assistants in the open.</h1>
+        <p className="page-lede">It all started with a personal habit. I wanted to build agentic frameworks that would help me write complete specs and build those, to save time while building side projects in parallel to my work. I had seen many articles, podcasts and articles about personal AI OS, and decided to try it. It became so powerful that I immediately wanted to try it at work. You can scroll down to follow that journey</p>
         <div className="journey-summary">
           <span className="tag tag-accent-2">{shipped} steps shipped</span>
-          <span className="tag tag-accent">{roadmapSteps.length - shipped} in progress</span>
+          <span className="tag tag-accent">{inProgress} in progress</span>
+          {upcoming > 0 && <span className="tag tag-outline">{upcoming} upcoming</span>}
         </div>
       </div>
 

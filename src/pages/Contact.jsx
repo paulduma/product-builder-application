@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { contact } from '../data/content.js';
-import Placeholder from '../components/Placeholder.jsx';
+import portrait from '../assets/paul-portrait.jpg';
 import {
   CheckIcon, CopyIcon, ExternalLinkIcon, GithubIcon, LinkedinIcon, MailIcon, PhoneIcon,
 } from '../components/Icons.jsx';
@@ -48,10 +48,10 @@ export default function Contact() {
       <div data-reveal>
         <div className="avatar">
           <div className="blob" style={{ width: 60, background: 'var(--color-accent-2-300)', right: -14, top: -6 }} />
-          <Placeholder>[Profile photo placeholder]</Placeholder>
+          <img className="avatar-photo" src={portrait} alt="Paul Dumas" />
         </div>
-        <h1>Let's talk product, AI, or rugby.</h1>
-        <p className="contact-lede">I usually reply within a day. Copy my email or phone, or open my profiles.</p>
+        <h1>Let's talk product, AI, or Sales funnel.</h1>
+        <p className="contact-lede">Here are all my contact details. You can also check out my Linkedin or Github profiles for more information.</p>
       </div>
       <div className="contact-list">
         {cards.map((card) => (card.action === 'link' ? (

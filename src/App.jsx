@@ -63,7 +63,7 @@ export default function App() {
       </main>
 
       <footer className="site-footer container">
-        <p>Let me know what you think! and let's talk about the Product Builder role</p>
+        <p>Let me know what you think! And let's talk about the Product Builder role</p>
         <div className="social-links">
           <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-link"><LinkedinIcon size={18} /></a>
           <a href={contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-link"><GithubIcon size={18} /></a>

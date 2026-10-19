@@ -1,7 +1,7 @@
 import { config, pathSteps } from '../data/content.js';
 import Placeholder from '../components/Placeholder.jsx';
 import { hrefFor, noop } from '../nav.js';
-import handshake from '../assets/paul-shaking-hands.png';
+import verdi from '../assets/verdi.jpg';
 
 export default function Home() {
   return (
@@ -23,8 +23,8 @@ export default function Home() {
           <div className="blob" style={{ width: '22%', background: 'var(--color-accent-2-300)', left: '-3%', bottom: '-4%' }} />
           <div className="hero-art">
             <img
-              src={handshake}
-              alt="Paul shaking hands with a friendly character"
+              src={verdi}
+              alt="Verdi, a brown and white dog, lying on the floor"
             />
           </div>
         </div>

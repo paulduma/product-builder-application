@@ -29,52 +29,45 @@ export const pathSteps = [
 ];
 
 // — My AI OS —
-// One step per stage of the journey, top to bottom. `status`: 'done' | 'progress'.
+// One step per stage of the journey, top to bottom. `status`: 'done' | 'progress' | 'future'.
 // Drop an image in src/assets and set `image` (plus `imageAlt`) to replace a step's placeholder.
 
 export const roadmapSteps = [
   {
     status: 'done',
     title: 'Turning my PM work into Claude skills',
-    desc: 'It started with me: I wrote reusable Claude skills for the work I repeat every week — specs, Linear tickets, weekly reviews, stakeholder updates, benchmarks. Each skill encodes how I actually work, so the output is consistent from one run to the next.',
-    tags: ['Claude', 'Skills', 'Prompts'],
-    illustration: 'Paul at a workbench, turning sticky notes into neat little skill cards',
+    desc: "It started with Claude skills I could use every day: refining specs, replacing repetitive tasks (feature performance reviews, stakeholder updates, benchmarks..), building. I wanted to improve my productivity, but most importantly to be able to iterate fast, update these on the go while having access to my full context. The AI OS system seemed like the perfect solution",
+    tags: ['Claude', 'Skills', 'Day-to-day ops'],
+    illustration: 'Screenshot of the skills repository (folder list of skills)',
   },
   {
     status: 'done',
-    title: 'Sharing it with the Product tribe — and training them',
-    desc: 'Skills only matter if people use them. I presented the setup to the Product tribe and ran training sessions so every PM could pick it up in their own workflows.',
-    tags: ['Adoption', 'Training', 'Product tribe'],
-    illustration: 'Paul in front of a small group of PMs, a big skill card on the whiteboard',
+    title: 'Sharing it with the Product tribe as a Claude plugin',
+    desc: "Skills only matter if people use them. To get feedbacks faster, with differrent technical background, abilities and enthusiasm among the tribe, I have first embedded those skills into a Claude plugin that everyone was able to use with no code integration. PMs were able to review the skills and make it their own from the Claude dekstop interface.",
+    tags: ['Plugin', 'Training', 'Product tribe'],
+    illustration: 'Screenshot of Claude with the Product plugin installed and its skills listed',
   },
   {
     status: 'done',
-    title: 'Packaged as a plugin, shared through Git',
-    desc: 'To make it easy to install and to keep everyone up to date, I bundled the skills into a plugin, versioned in Git. One install, and every improvement reaches the whole team.',
-    tags: ['Plugin', 'Git', 'Versioning'],
-    illustration: 'A gift box labelled "plugin" travelling along a Git branch to several laptops',
-  },
-  {
-    status: 'done',
-    title: 'A real Product OS, in Claude Code & the terminal',
-    desc: 'Next, I turned the plugin into a proper Product OS: the same skills now run in Claude Code and straight from the terminal, connected to our tools (Linear, Notion) — not just in a chat window.',
-    tags: ['Claude Code', 'Terminal', 'MCP connectors'],
-    illustration: 'A friendly terminal window with a Product OS logo, plugged into Linear and Notion',
-  },
-  {
-    status: 'done',
-    title: 'Frameworks: several skills, chained end to end',
-    desc: 'Then came frameworks — tools that run several skills one after the other. From a two-line feature idea to a written spec, a functional summary and ready-to-use Linear tickets, with a check-in at each step.',
-    tags: ['Frameworks', 'Workflows', 'Linear'],
-    illustration: 'Skill cards clicking together like train carriages, from "idea" to "tickets"',
+    title: 'Driving adoption to the real repo',
+    desc: 'Next, I pushed the team into actually forking the Product OS and run it contributing to it. I wrote how-tos and documentation, and animated recurring demo sessions for the tribe to share progress and get their hands on to the solution. The plugin now has many contribution from the most active PMs and most AI-enthusiastic ones.',
+    tags: ['Fork', 'Documentation', 'MCP connectors'],
+    illustration: 'Screenshot of the AI OS folder structure (skills, docs, connectors)',
   },
   {
     status: 'progress',
+    title: 'Building agents: the Product Forge',
+    desc: "With a strong set up and a first set up of useful skills, the next natural steps was starting to build agentic workflows. The first natural step for Product Managers, widely documented among this community, is the creation of a Product Forge: which takes all the skills we're using for the different steps of our discoveries and delivery tracking and organizes it into a structured end-to-end workflow. The tribe's best practices get combined instead of staying in separate repos.",
+    tags: ['Agents', 'Multi-agent', 'Product Forge'],
+    illustration: 'A forge where skill cards from several PMs are melted into a few small agent characters working side by side',
+  },
+  {
+    status: 'future',
     target: true,
-    title: 'An autonomous agent you can talk to on Teams',
-    desc: 'The real target: an autonomous agent my colleagues can simply message on Microsoft Teams. It picks the right skills and frameworks on its own and comes back with the work done — moving from pull-based tools to a proactive assistant.',
-    tags: ['Agents', 'Microsoft Teams', 'Autonomy'],
-    illustration: 'A friendly agent character popping out of a Teams chat bubble, handing over a finished doc',
+    title: 'An AI OS you can reach from Teams, even on mobile',
+    desc: "At a recent internal hackathon, I built a prototype where the AI OS was running directly inside Microsoft Teams, for a wider non-tech audience to be able to package skills they're using and call them without even being at their desk. That's where it's heading: a Product OS that's always within reach.",
+    tags: ['Hackathon', 'Microsoft Teams', 'Mobile'],
+    illustration: 'A phone showing a Teams chat with the agent replying with a finished doc',
   },
 ];
 
@@ -221,5 +214,5 @@ export const skillsNote = 'Curious and keen on learning, I regularly take new ce
 
 export const interests = [
   { label: 'Sports', text: 'Rugby in competition (20+ years), Trail' },
-  { label: 'Side Projects', text: 'Building AI-first PWAs (sports planner via LLM API + Google Calendar, recipe planner, RAG-based CV generator), exploring how to move from simple chatbots to proactive AI-first products' },
+  { label: 'Side Projects', text: 'Building AI-first PWAs (sports planner via LLM API + Google Calendar, Recipe planner with Supabase..), exploring how to move from simple chatbots to proactive AI-first products' },
 ];
