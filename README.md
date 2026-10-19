@@ -18,3 +18,10 @@ npm run build    # static build in dist/
 ## Still placeholder
 
 Illustrations and profile photo (dashed frames), LinkedIn/GitHub URLs, the recipe app / demo links, the resume PDF, and the three bullets for the current Betclic role.
+
+## TO DO - ETA Tuesday ?
+- Landing page: create and edit text
+- Generate visuals for all the website (easy screenshots and improved designs)
+- Design review of Landing
+- Design review of Resume
+- Publish and create text for the application
