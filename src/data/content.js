@@ -3,6 +3,7 @@
 import productOsStructure from '../assets/product-os-structure.jpg';
 import claudePluginSkills from '../assets/claude-plugin-skills.png';
 import workspaceStructure from '../assets/workspace-structure.jpg';
+import agentWorkflow from '../assets/agent-workflow.jpg';
 
 // Toggles carried over from the design's editor props.
 export const config = {
@@ -89,6 +90,9 @@ export const roadmapSteps = [
     desc: "With a strong set up and a first set up of useful skills, the next natural steps was starting to build agentic workflows. The first natural step for Product Managers, widely documented among this community, is the creation of a Product Forge: which takes all the skills we're using for the different steps of our discoveries and delivery tracking and organizes it into a structured end-to-end workflow. The tribe's best practices get combined instead of staying in separate repos.",
     tags: ['Agents', 'Multi-agent', 'Product Forge'],
     illustration: 'A forge where skill cards from several PMs are melted into a few small agent characters working side by side',
+    image: agentWorkflow,
+    imageAlt: 'Agent workflow in four steps: 1. Frames the idea, 2. Challenges the solution, 3. Prepares the delivery, 4. Follows up delivery & plans the roll-out.',
+    imageFit: 'contain',
   },
   {
     status: 'future',
