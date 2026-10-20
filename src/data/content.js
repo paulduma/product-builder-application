@@ -4,6 +4,7 @@ import productOsStructure from '../assets/product-os-structure.jpg';
 import claudePluginSkills from '../assets/claude-plugin-skills.png';
 import workspaceStructure from '../assets/workspace-structure.jpg';
 import agentWorkflow from '../assets/agent-workflow.jpg';
+import teamsAgentFlow from '../assets/teams-agent-flow.jpg';
 
 // Toggles carried over from the design's editor props.
 export const config = {
@@ -101,6 +102,9 @@ export const roadmapSteps = [
     desc: "At a recent internal hackathon, I built a prototype where the AI OS was running directly inside Microsoft Teams, for a wider non-tech audience to be able to package skills they're using and call them without even being at their desk. That's where it's heading: a Product OS that's always within reach.",
     tags: ['Hackathon', 'Microsoft Teams', 'Mobile'],
     illustration: 'A phone showing a Teams chat with the agent replying with a finished doc',
+    image: teamsAgentFlow,
+    imageAlt: 'How it flows: the user asks a question or shares an idea, chats in Teams with the agent where the team already works, OpenAI agents process the request, and docs are written and updated in Obsidian.',
+    imageFit: 'contain',
   },
 ];
 
