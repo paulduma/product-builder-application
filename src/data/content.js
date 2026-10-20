@@ -28,25 +28,25 @@ export const pages = [
 // — Home · My AI vision — one card each; `highlight` marks the one tailored to the company.
 export const visionPoints = [
   {
-    kicker: 'Personally',
-    title: 'Learning by shipping',
-    body: 'Cursor + Claude (paid plans) to build side products in my free time: a recipe app, a calendar assistant, and a backlog full of others (sommelier, sports coach…).',
+    kicker: 'Access',
+    title: 'AI where people already work',
+    body: "Claude Code is great, but working in a terminal doesn't suit everyone. I'm drawn to building AI into the very tools people already use: mobile only (as in my recent hackathon), or a Teams or Slack thread, which fit my use cases even better than an AI embedded in a CRM.",
   },
   {
-    kicker: 'At work',
-    title: 'An AI OS for a whole Product tribe',
-    body: 'At Betclic, I turned my PM work into shared Claude skills, packaged them as a plugin, trained the team (even the least technical) and am now building agents on top.',
+    kicker: 'Hyper-personalization',
+    title: 'Not just human: sounding like you',
+    body: "One of the biggest challenges: not only making it sound human, but making it sound like you, with your memory and your ways of working. Reusing someone else's setup rarely works, it just feels standard.",
   },
   {
-    kicker: 'What I explore',
-    title: 'Agents that live where people work',
-    body: 'Multi-agent setups, connecting AI to real tools (MCP), and moving from chat windows to assistants you reach from Teams or your phone.',
-  },
-  {
-    kicker: 'For [Company]',
-    title: 'A proactive sales funnel',
-    body: "Where I think AI pays off most: assistants that surface the right lead, prep the next call, draft the follow-up and keep the CRM clean. Sales teams move from pull-based tools to the right action at the right time.",
+    kicker: 'Autonomy',
+    title: 'From agentic workflows to real workers',
+    body: "My real target, and one every team could benefit from: agents you can hire and delegate to. They collect deals, prepare your meetings and summarise what happened, freeing your mental load because, in the end, you don't even have to ask. Next comes cross-collaboration: how could my agent tell a colleague's agent about an interesting call I just had?",
     highlight: true,
+  },
+  {
+    kicker: 'Data',
+    title: 'Structured data, everywhere',
+    body: 'Whether on inbound or outbound, every interaction should be captured and structured so it can be reused. A hard challenge, and one my data experience can help solve.',
   },
 ];
 

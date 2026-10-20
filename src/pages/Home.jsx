@@ -49,8 +49,8 @@ export default function Home() {
       <section className="vision" data-screen-label="Home · My AI vision">
         <div data-reveal className="prose vision-intro">
           <span className="eyebrow eyebrow--sage">My AI vision</span>
-          <h2 className="section-title">AI, for everything and anything. Build, build, build.</h2>
-          <p>To me, AI isn't a tool you open once in a while. It's a layer across everything I do, and the best version of it comes to you instead of waiting to be asked.</p>
+          <h2 className="section-title">Build, build, build. The most effective way to understand it is to test it</h2>
+          <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I lost time reading and listening about it, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, testing is at the center of my approach.</p>
         </div>
         <div className="vision-grid">
           {visionPoints.map((v) => (
