@@ -22,6 +22,10 @@ Illustrations and profile photo (dashed frames), LinkedIn/GitHub URLs, the recip
 ## TO DO - ETA Tuesday ?
 - Landing page: create and edit text
 - Generate visuals for all the website (easy screenshots and improved designs)
+  [x] 5 steps AI OS
+  [] 3 steps Landing page  
 - Design review of Landing
+- Content review of Landing
 - Design review of Resume
+- Content review of Resume
 - Publish and create text for the application
