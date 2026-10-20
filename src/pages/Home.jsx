@@ -80,8 +80,8 @@ export default function Home() {
         <div data-reveal className="prose">
           <span className="eyebrow">About this site</span>
           <h2 className="section-title">Built quickly, built for you</h2>
-          <p>I built this site in a few days, with my own AI setup, just to apply to [Company]. It's my way of showing how interested I am in the role and in what [Company] stands for: [value 1], [value 2], [value 3].</p>
-          <p>I'd be really happy to connect and talk about the position.</p>
+          <p>I strongly believe I could be a good fit for this position, thanks to my experience in scale-ups working with sales teams, my data and AI expertise, and my PM skills. I have a builder mindset that I want to bring to this role.</p>
+          <p>Feel free to explore this website to learn more about me. You'll find my contact details below if you'd like to reach out.</p>
           <div style={{ marginTop: 28 }}>
             <a href={hrefFor('contact')} className="btn btn-primary">Get in touch →</a>
           </div>
