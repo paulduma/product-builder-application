@@ -1,6 +1,8 @@
 // All portfolio copy and data lives here, so updating the site rarely means touching markup.
 
 import productOsStructure from '../assets/product-os-structure.jpg';
+import claudePluginSkills from '../assets/claude-plugin-skills.png';
+import workspaceStructure from '../assets/workspace-structure.jpg';
 
 // Toggles carried over from the design's editor props.
 export const config = {
@@ -67,6 +69,9 @@ export const roadmapSteps = [
     desc: "Skills only matter if people use them. To get feedbacks faster, with differrent technical background, abilities and enthusiasm among the tribe, I have first embedded those skills into a Claude plugin that everyone was able to use with no code integration. PMs were able to review the skills and make it their own from the Claude dekstop interface.",
     tags: ['Plugin', 'Training', 'Product tribe'],
     illustration: 'Screenshot of Claude with the Product plugin installed and its skills listed',
+    image: claudePluginSkills,
+    imageAlt: "Claude desktop's skill menu, listing the Identity product operations plugin skills (betclic-mobile-prototype, data-query, identity-sprint-report, jira-backlog-audit, jira-user-story) with the sprint report skill's description shown.",
+    imageFit: 'contain',
   },
   {
     status: 'done',
@@ -74,6 +79,9 @@ export const roadmapSteps = [
     desc: 'Next, I pushed the team into actually forking the Product OS and run it contributing to it. I wrote how-tos and documentation, and animated recurring demo sessions for the tribe to share progress and get their hands on to the solution. The plugin now has many contribution from the most active PMs and most AI-enthusiastic ones.',
     tags: ['Fork', 'Documentation', 'MCP connectors'],
     illustration: 'Screenshot of the AI OS folder structure (skills, docs, connectors)',
+    image: workspaceStructure,
+    imageAlt: 'The Desktop/My_Projects/ workspace: product-os/ (the skills, tools & workflows), prod_repos/ (read-only access to the tribe repositories, for context) and Projects/ (analysis, prototypes), with a claude-pm alias that launches Claude from a prototype with access to both folders.',
+    imageFit: 'contain',
   },
   {
     status: 'progress',
