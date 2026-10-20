@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { roadmapSteps, sideBuilds } from '../data/content.js';
-import { hrefFor } from '../nav.js';
+import { roadmapSteps } from '../data/content.js';
 import Placeholder from '../components/Placeholder.jsx';
 
 // Visual rhythm for the steps: frame shapes, tints and decorative blobs cycle like on the home page.
@@ -86,7 +85,8 @@ export default function Roadmap() {
       <div data-reveal className="roadmap-intro">
         <span className="eyebrow">My AI OS</span>
         <h1 className="page-title">My current approach to AI at work: building assistants in the open.</h1>
-        <p className="page-lede">It all started with a personal habit. I wanted to build agentic frameworks that would help me write complete specs and build those, to save time while building side projects in parallel to my work. I had seen many articles, podcasts and articles about personal AI OS, and decided to try it. It became so powerful that I immediately wanted to try it at work. You can scroll down to follow that journey</p>
+        <p className="page-lede">I'm genuinely enthusiastic about all the new AI tools that keep emerging, and it's hard to keep track. I first used them for myself, to boost my productivity at work and to ship side projects. Then fellow Product Managers wanted to scale their own use of these tools, so I came up with this project.</p>
+        <p className="page-lede">It's one example of an AI topic I've successfully driven and rolled out across my company, and I wanted to share it as part of my application for this role. Scroll down to follow the journey.</p>
         <div className="journey-summary">
           <span className="tag tag-accent-2">{shipped} steps shipped</span>
           <span className="tag tag-accent">{inProgress} in progress</span>
@@ -121,27 +121,10 @@ export default function Roadmap() {
         </ol>
       </div>
 
-      <div className="side-builds">
-        <div data-reveal>
-          <span className="eyebrow eyebrow--sage">Alongside</span>
-          <h2 className="section-title">Side builds</h2>
-        </div>
-        <div className="side-builds-grid">
-          {sideBuilds.map((b) => (
-            <a key={b.key} data-reveal href={hrefFor(`build/${b.key}`)} className="roadmap-card">
-              <div className="roadmap-card-head">
-                <h4>{b.title}</h4>
-                <span className={`tag ${STATUS[b.status].cls}`}>{STATUS[b.status].label}</span>
-              </div>
-              <p>{b.desc}</p>
-              <div className="row">
-                {b.tags.map((t) => <span key={t} className="tag tag-neutral">{t}</span>)}
-              </div>
-              <span className="roadmap-card-open">Open →</span>
-            </a>
-          ))}
-        </div>
-      </div>
+      <aside data-reveal className="tldr" aria-label="Summary">
+        <span className="tldr-label">tl;dr</span>
+        <p className="tldr-text">I designed the framework for the team, ran demos, and they all became users and contributors to the project.</p>
+      </aside>
     </section>
   );
 }
