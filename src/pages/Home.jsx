@@ -1,7 +1,65 @@
+import { useEffect, useState } from 'react';
 import { visionPoints } from '../data/content.js';
 import Placeholder from '../components/Placeholder.jsx';
 import { hrefFor } from '../nav.js';
 import verdi from '../assets/verdi.jpg';
+
+// Hero title job: types "Owner", swaps it for "Manager", then lands on "Builder" and stays.
+const ROLES = ['Owner', 'Manager', 'Builder'];
+const TYPE_MS = 90;
+const ERASE_MS = 50;
+const HOLD_MS = 1100;
+
+function TypedRole() {
+  const final = ROLES[ROLES.length - 1];
+  const longest = ROLES.reduce((a, b) => (b.length > a.length ? b : a));
+  const reduceMotion = typeof window !== 'undefined'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const [text, setText] = useState(reduceMotion ? final : '');
+  const [done, setDone] = useState(reduceMotion);
+
+  useEffect(() => {
+    if (reduceMotion) return undefined;
+    let role = 0;
+    let len = 0;
+    let erasing = false;
+    let timer;
+    const tick = () => {
+      const word = ROLES[role];
+      if (!erasing) {
+        len += 1;
+        setText(word.slice(0, len));
+        if (len < word.length) { timer = setTimeout(tick, TYPE_MS); return; }
+        if (role === ROLES.length - 1) { setDone(true); return; }
+        erasing = true;
+        timer = setTimeout(tick, HOLD_MS);
+      } else {
+        len -= 1;
+        setText(word.slice(0, len));
+        if (len > 0) { timer = setTimeout(tick, ERASE_MS); return; }
+        erasing = false;
+        role += 1;
+        timer = setTimeout(tick, TYPE_MS * 3);
+      }
+    };
+    timer = setTimeout(tick, 600);
+    return () => clearTimeout(timer);
+  }, [reduceMotion]);
+
+  return (
+    <>
+      <span className="sr-only">{final}.</span>
+      {/* The invisible longest word holds the space, so the title doesn't reflow while typing. */}
+      <span aria-hidden="true" className="typed-role">
+        <span className="typed-ghost">{longest}.</span>
+        <span className="typed-text">
+          {text}
+          <span className={`typed-caret${done ? ' typed-caret--done' : ''}`} />.
+        </span>
+      </span>
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -10,7 +68,7 @@ export default function Home() {
         <div data-reveal>
           <h1>
             <span className="hello">Hello 👋</span>
-            <span>My name is Paul, I'm a Product Builder.</span>
+            <span>My name is Paul, I'm a Product <TypedRole /></span>
           </h1>
           <p className="hero-lede">The two things that I love most in my job: <strong>Building</strong>, for the creative side of turning ideas into real products; and <strong>Translating</strong>, while being at the crossroad of tech, business, sales and exec.</p>
           <div className="row">
