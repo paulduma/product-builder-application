@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split split--last" data-screen-label="Home · About this site">
+      <section className="split split--last" data-screen-label="Home · Why me">
         <div data-reveal className="art">
           <div className="blob" style={{ width: '34%', background: 'var(--color-accent-2-200)', right: '-4%', top: '-8%' }} />
           <Placeholder tone="terracotta-soft" style={{ aspectRatio: '5 / 4', maxWidth: 520, borderRadius: '64px 160px 64px 64px', padding: 40 }}>
@@ -78,8 +78,8 @@ export default function Home() {
           </Placeholder>
         </div>
         <div data-reveal className="prose">
-          <span className="eyebrow">About this site</span>
-          <h2 className="section-title">Built quickly, built for you</h2>
+          <span className="eyebrow">Why me</span>
+          <h2 className="section-title">A builder for your AI sales team</h2>
           <p>I strongly believe I could be a good fit for this position, thanks to my experience in scale-ups working with sales teams, my data and AI expertise, and my PM skills. I have a builder mindset that I want to bring to this role.</p>
           <p>Feel free to explore this website to learn more about me. You'll find my contact details below if you'd like to reach out.</p>
           <div style={{ marginTop: 28 }}>
