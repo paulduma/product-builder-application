@@ -30,13 +30,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split" data-screen-label="Home · My path">
+      <section className="split" data-screen-label="Home · About me">
         <div data-reveal className="prose">
-          <span className="eyebrow">My path</span>
-          <h2 className="section-title">From engineering school to product</h2>
-          <p>I discovered Product during engineering school, after preparatory classes in Maths &amp; Physics and École Centrale de Lyon.</p>
-          <p>I then navigated tech startups and scale-ups in Paris (Cubyn, HelloFresh) as Strategic Projects Manager, before becoming a Product Manager at Betclic.</p>
-          <p>Today, I'm looking for a new challenge: building something from scratch, taking my AI skills further, and putting them to work where they move the business. That's exactly what draws me to [Company].</p>
+          <span className="eyebrow">A little bit about myself</span>
+          <h2 className="section-title">My journey across product</h2>
+          <p>I've always wanted to be a builder. I didn't end up in construction as planned, but I found another way of building: in tech startups. Whether at HelloFresh, Cubyn or Betclic, I was always amazed by what we could achieve and create with new technologies.</p>
+          <p>Over the last few years, what I've enjoyed most is working more and more with AI. It broke the time barrier for building, let me unleash my creativity, and allowed me to build the products I imagined myself (like this short overview).</p>
+          <p>Today, as I look for a new challenge, this position particularly stood out to me.</p>
         </div>
         <div data-reveal className="art">
           <div className="blob" style={{ width: '38%', background: 'var(--color-accent-100)', left: '-6%', top: '-6%' }} />
