@@ -202,6 +202,9 @@ main.container { flex: 1; }
 .step-art { max-width: 520px; width: 100%; }
 .step-frame { position: relative; aspect-ratio: 5 / 4; overflow: hidden; box-shadow: var(--shadow-md); }
 .step-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Diagrams and screenshots keep their own ratio so nothing gets cropped. */
+.step-frame--contain { aspect-ratio: auto; }
+.step-frame--contain img { position: static; height: auto; display: block; }
 
 .step-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
 .step-number {

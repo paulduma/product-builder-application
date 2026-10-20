@@ -57,7 +57,10 @@ function StepArt({ step, i }) {
     <div data-reveal className="art step-art">
       <div className="blob" style={BLOBS[i % BLOBS.length]} />
       {step.image ? (
-        <div className="step-frame" style={{ borderRadius: radius }}>
+        <div
+          className={`step-frame${step.imageFit === 'contain' ? ' step-frame--contain' : ''}`}
+          style={{ borderRadius: step.imageFit === 'contain' ? 18 : radius }}
+        >
           <img src={step.image} alt={step.imageAlt || ''} />
         </div>
       ) : (

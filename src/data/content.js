@@ -1,5 +1,7 @@
 // All portfolio copy and data lives here, so updating the site rarely means touching markup.
 
+import productOsStructure from '../assets/product-os-structure.jpg';
+
 // Toggles carried over from the design's editor props.
 export const config = {
   animations: true, // scroll-reveal motion (always off under prefers-reduced-motion)
@@ -47,6 +49,7 @@ export const visionPoints = [
 // — My AI OS —
 // One step per stage of the journey, top to bottom. `status`: 'done' | 'progress' | 'future'.
 // Drop an image in src/assets and set `image` (plus `imageAlt`) to replace a step's placeholder.
+// Set `imageFit: 'contain'` to show the whole image at its own ratio instead of cropping it to the frame.
 
 export const roadmapSteps = [
   {
@@ -54,7 +57,9 @@ export const roadmapSteps = [
     title: 'Turning my PM work into Claude skills',
     desc: "It started with Claude skills I could use every day: refining specs, replacing repetitive tasks (feature performance reviews, stakeholder updates, benchmarks..), building. I wanted to improve my productivity, but most importantly to be able to iterate fast, update these on the go while having access to my full context. The AI OS system seemed like the perfect solution",
     tags: ['Claude', 'Skills', 'Day-to-day ops'],
-    illustration: 'Screenshot of the skills repository (folder list of skills)',
+    image: productOsStructure,
+    imageAlt: 'The product-os/ folder: .claude-plugin/ (plugin manifest), skills/ (the team skills), agents/ (agentic workflows using skills), tools/ (AI-generated tools & services), docs/ (team context, how-tos & guidelines) and templates/ (files to copy for each new project).',
+    imageFit: 'contain',
   },
   {
     status: 'done',
