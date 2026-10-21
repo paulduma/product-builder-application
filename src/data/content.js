@@ -28,25 +28,25 @@ export const pages = [
 // — Home · My AI vision — one card each; `highlight` marks the one tailored to the company.
 export const visionPoints = [
   {
-    kicker: 'Access',
-    title: 'AI where people already work',
-    body: "Claude Code is great, but working in a terminal doesn't suit everyone. I'm drawn to building AI into the very tools people already use: mobile only (as in my recent hackathon), or a Teams or Slack thread, which fit my use cases even better than an AI embedded in a CRM.",
+    kicker: 'Access everywhere, anytime',
+    title: 'AI where people work',
+    body: "AI embedded in Slack and your CRM is nice, but the more tools you add, the harder it is to keep track of everything. I'm focused on bringing AI into one centralized interface, with a mobile-first vision.",
   },
   {
-    kicker: 'Hyper-personalization',
-    title: 'Not just human: sounding like you',
-    body: "One of the biggest challenges: not only making it sound human, but making it sound like you, with your memory and your ways of working. Reusing someone else's setup rarely works, it just feels standard.",
+    kicker: 'Hyper-personalized',
+    title: 'People buy from humans, not AI agents',
+    body: "One of the biggest challenges is not only making AI sound human, but making it sound like you, with your memory and your ways of working. Reusing someone else's setup rarely works: it just feels generic.",
   },
   {
     kicker: 'Autonomy',
-    title: 'From agentic workflows to real workers',
-    body: "My real target, and one every team could benefit from: agents you can hire and delegate to. They collect deals, prepare your meetings and summarise what happened, freeing your mental load because, in the end, you don't even have to ask. Next comes cross-collaboration: how could my agent tell a colleague's agent about an interesting call I just had?",
+    title: 'From agentic workflows to AI workers',
+    body: "Agents are very good at replicating the tasks we taught them. But I'm fascinated by the companies that pushed it even further, with proactive, self-improving AI workers that extend their own capabilities and take action for you.",
     highlight: true,
   },
   {
-    kicker: 'Data',
-    title: 'Structured data, everywhere',
-    body: 'Whether on inbound or outbound, every interaction should be captured and structured so it can be reused. A hard challenge, and one my data experience can help solve.',
+    kicker: 'Structured data',
+    title: 'Every piece of information matters',
+    body: "I've noticed that product teams sometimes underestimate the leverage of a single piece of information. Yet even the smallest update can make the difference in a deal, so sales teams must capture everything happening around them. That requires a strong, structured database.",
   },
 ];
 
