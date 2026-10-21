@@ -107,7 +107,7 @@ export default function Home() {
       <section className="vision" data-screen-label="Home · My AI vision">
         <div data-reveal className="prose vision-intro">
           <span className="eyebrow eyebrow--sage">My AI vision</span>
-          <h2 className="section-title">Build for me, and for the others</h2>
+          <h2 className="section-title">Fast iterations, strong feedback loops</h2>
           <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I might have lost some time reading and listening about AI features, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, <strong>testing and working directly with the core users</strong> is at the center of my approach.</p>
         </div>
         <div className="vision-grid">
