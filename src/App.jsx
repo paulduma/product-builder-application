@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { config, contact, pages, sideBuilds } from './data/content.js';
 import useReveal from './useReveal.js';
 import { hrefFor } from './nav.js';
@@ -70,6 +71,7 @@ export default function App() {
           <a href={`mailto:${contact.email}`} aria-label="Email" className="social-link"><MailIcon size={18} /></a>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 }
