@@ -70,7 +70,7 @@ export default function Home() {
             <span className="hello">Hello 👋</span>
             <span>My name is Paul, I'm a Product <TypedRole /></span>
           </h1>
-          <p className="hero-lede">The two things that I love most in my job: <strong>Building</strong>, for the creative side of turning ideas into real products; and <strong>Translating</strong>, while being at the crossroad of tech, business, sales and exec.</p>
+          <p className="hero-lede">I'd like to reach out to help you build the future of sales with AI. I'd like to bring my proven record of working at the crossroad of Tech, Business, Sales and Operations in Product companies, and would love to know more about your vision for this position.</p>
           <div className="row">
             <a href={hrefFor('resume')} className="btn btn-secondary">Check my resume</a>
             <a href={hrefFor('roadmap')} className="btn btn-primary">See my AI OS</a>
@@ -92,9 +92,9 @@ export default function Home() {
         <div data-reveal className="prose">
           <span className="eyebrow">A little bit about myself</span>
           <h2 className="section-title">My journey across product</h2>
-          <p>I've always wanted to be a builder. I didn't end up in construction as planned, but I found another way of building: in tech startups. Whether at HelloFresh, Cubyn or Betclic, I was always amazed by what we could achieve and create with new technologies.</p>
-          <p>Over the last few years, what I've enjoyed most is working more and more with AI. It broke the time barrier for building, let me unleash my creativity, and allowed me to build the products I imagined myself (like this short overview).</p>
-          <p>Today, as I look for a new challenge, this position particularly stood out to me.</p>
+          <p>I've always wanted to be a builder. I didn't end up in construction as planned, but I found another way of building: in tech startups. Whether at HelloFresh, Cubyn or Betclic, I was always amazed to see what we could achieve with new technologies.</p>
+          <p>Over the last few years, what I've enjoyed most is working more and more with AI. It broke the time barrier for building, let me unleash my creativity, and allowed me to build the products I imagined myself.</p>
+          <p>Today, looking for a new challenge, I'm curious to hear more about the Product Builder role, that fits the ambitions that I have for what's next.</p>
         </div>
         <div data-reveal className="art">
           <div className="blob" style={{ width: '38%', background: 'var(--color-accent-100)', left: '-6%', top: '-6%' }} />
@@ -107,8 +107,8 @@ export default function Home() {
       <section className="vision" data-screen-label="Home · My AI vision">
         <div data-reveal className="prose vision-intro">
           <span className="eyebrow eyebrow--sage">My AI vision</span>
-          <h2 className="section-title">Build, build, build. The most effective way to understand it is to test it</h2>
-          <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I lost time reading and listening about it, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, testing is at the center of my approach.</p>
+          <h2 className="section-title">Build for me, and for the others</h2>
+          <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I might have lost some time reading and listening about AI features, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, <strong>testing and working directly with the core users</strong> is at the center of my approach.</p>
         </div>
         <div className="vision-grid">
           {visionPoints.map((v) => (

@@ -59,8 +59,7 @@ export const roadmapSteps = [
   {
     status: 'done',
     title: 'Turning my PM work into Claude skills',
-    desc: "It started with Claude skills I could use every day: refining specs, replacing repetitive tasks (feature performance reviews, stakeholder updates, benchmarks..), building. I wanted to improve my productivity, but most importantly to be able to iterate fast, update these on the go while having access to my full context. The AI OS system seemed like the perfect solution",
-    tags: ['Claude', 'Skills', 'Day-to-day ops'],
+    desc: "I started with Claude skills I could use every day: refining specs, replacing repetitive tasks, communicating with stakeholders... But those skills were not easy to share with the team. So I created a dedicated space for them, with context about our team, our processes and our tools.",
     image: productOsStructure,
     imageAlt: 'The product-os/ folder: .claude-plugin/ (plugin manifest), skills/ (the team skills), agents/ (agentic workflows using skills), tools/ (AI-generated tools & services), docs/ (team context, how-tos & guidelines) and templates/ (files to copy for each new project).',
     imageFit: 'contain',
@@ -68,8 +67,7 @@ export const roadmapSteps = [
   {
     status: 'done',
     title: 'Sharing it with the Product tribe as a Claude plugin',
-    desc: "Skills only matter if people use them. To get feedbacks faster, with differrent technical background, abilities and enthusiasm among the tribe, I have first embedded those skills into a Claude plugin that everyone was able to use with no code integration. PMs were able to review the skills and make it their own from the Claude dekstop interface.",
-    tags: ['Plugin', 'Training', 'Product tribe'],
+    desc: "Skills only matter if people use them. And for some, such a repository is still a hard tech barrier slowing down adoption. To get feedbacks faster, I have embedded those skills into a Claude plugin that everyone can use. PMs were able to review the skills and make it their own from the Claude dekstop interface.",
     illustration: 'Screenshot of Claude with the Product plugin installed and its skills listed',
     image: claudePluginSkills,
     imageAlt: "Claude desktop's skill menu, listing the Identity product operations plugin skills (betclic-mobile-prototype, data-query, identity-sprint-report, jira-backlog-audit, jira-user-story) with the sprint report skill's description shown.",
@@ -78,8 +76,7 @@ export const roadmapSteps = [
   {
     status: 'done',
     title: 'Driving adoption to the real repo',
-    desc: 'Next, I pushed the team into actually forking the Product OS and run it contributing to it. I wrote how-tos and documentation, and animated recurring demo sessions for the tribe to share progress and get their hands on to the solution. The plugin now has many contribution from the most active PMs and most AI-enthusiastic ones.',
-    tags: ['Fork', 'Documentation', 'MCP connectors'],
+    desc: 'Next, I pushed the team into actually forking the Product OS and contributing to it. I wrote how-tos and documentation, and animated recurring demo sessions for the tribe to share progress and get their hands on to the solution. The plugin now has many contribution from the most active PMs and most AI-enthusiastic ones. It can also be launched from actual prototypes, to work with the full context of the team repositories and documentation living in the claude session.',
     illustration: 'Screenshot of the AI OS folder structure (skills, docs, connectors)',
     image: workspaceStructure,
     imageAlt: 'The Desktop/My_Projects/ workspace: product-os/ (the skills, tools & workflows), prod_repos/ (read-only access to the tribe repositories, for context) and Projects/ (analysis, prototypes), with a claude-pm alias that launches Claude from a prototype with access to both folders.',
@@ -88,8 +85,7 @@ export const roadmapSteps = [
   {
     status: 'progress',
     title: 'Building agents: the Product Forge',
-    desc: "With a strong set up and a first set up of useful skills, the next natural steps was starting to build agentic workflows. The first natural step for Product Managers, widely documented among this community, is the creation of a Product Forge: which takes all the skills we're using for the different steps of our discoveries and delivery tracking and organizes it into a structured end-to-end workflow. The tribe's best practices get combined instead of staying in separate repos.",
-    tags: ['Agents', 'Multi-agent', 'Product Forge'],
+    desc: "With a strong set up and a first set up of useful skills, the next natural steps was starting to build agentic workflows. We started with an agent taking all the skills we used for the different steps of our discoveries and delivery tracking to turn it into a structured end-to-end workflow.",
     illustration: 'A forge where skill cards from several PMs are melted into a few small agent characters working side by side',
     image: agentWorkflow,
     imageAlt: 'Agent workflow in four steps: 1. Frames the idea, 2. Challenges the solution, 3. Prepares the delivery, 4. Follows up delivery & plans the roll-out.',
@@ -98,9 +94,8 @@ export const roadmapSteps = [
   {
     status: 'future',
     target: true,
-    title: 'An AI OS you can reach from Teams, even on mobile',
-    desc: "At a recent internal hackathon, I built a prototype where the AI OS was running directly inside Microsoft Teams, for a wider non-tech audience to be able to package skills they're using and call them without even being at their desk. That's where it's heading: a Product OS that's always within reach.",
-    tags: ['Hackathon', 'Microsoft Teams', 'Mobile'],
+    title: 'An AI OS you can reach from anywhere, anytime',
+    desc: "At a recent internal hackathon, I built a prototype where the AI OS was running directly from Microsoft Teams, for a wider non-tech audience to be able to package skills they're using and call them without even being at their desk. That's where it's heading: a Product OS that's always within reach.",
     illustration: 'A phone showing a Teams chat with the agent replying with a finished doc',
     image: teamsAgentFlow,
     imageAlt: 'How it flows: the user asks a question or shares an idea, chats in Teams with the agent where the team already works, OpenAI agents process the request, and docs are written and updated in Obsidian.',
@@ -161,7 +156,7 @@ export const resume = {
   title: 'Product Builder',
   subtitle: 'AI & Data',
   location: 'Bordeaux, France',
-  about: 'Product Manager with 5+ years experience across product & strategy roles in tech scale-ups and regulated industries. Passionate about AI, I thrive on turning ambitious visions into concrete solutions and building AI-first tools.I love the 0 to 1 energy, building things from scratch and pushing beyond my scope.',
+  about: 'Product Manager with 5+ years experience across product & strategy roles in tech scale-ups and regulated industries. I thrive on turning ambitious visions into concrete solutions and building AI-first tools. I love the 0 to 1 energy, building things from scratch and pushing beyond my scope.',
 };
 
 // Each role can hold several phases (e.g. a promotion within the same company).
@@ -174,7 +169,7 @@ export const experience = [
         title: 'Product Manager, Account Management',
         intro: 'Leading transverse topics around Identity verification and Account Management.',
         metrics: [
-          { v: '', l: 'Bridging the gap between Product, Operations, Acquisition and Compliance teams' },
+          { v: '', l: 'Bridging the gap between Product, Operations, Growth & Acquisition and Compliance teams' },
         ],
         bullets: [
           'Currently reshaping the full registration funnel, to increase the Verified accounts Conversion using integration with banks and other external providers.',

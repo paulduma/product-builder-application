@@ -84,9 +84,9 @@ export default function Roadmap() {
     <section className="page" data-screen-label="My AI OS">
       <div data-reveal className="roadmap-intro">
         <span className="eyebrow">My AI OS</span>
-        <h1 className="page-title">My current approach to AI at work: building assistants in the open.</h1>
-        <p className="page-lede">I'm genuinely enthusiastic about all the new AI tools that keep emerging, and it's hard to keep track. I first used them for myself, to boost my productivity at work and to ship side projects. Then fellow Product Managers wanted to scale their own use of these tools, so I came up with this project.</p>
-        <p className="page-lede">It's one example of an AI topic I've successfully driven and rolled out across my company, and I wanted to share it as part of my application for this role. Scroll down to follow the journey.</p>
+        <h1 className="page-title">Structuring and scaling AI usage for fellow Product Managers.</h1>
+        <p className="page-lede">I'm genuinely enthusiastic about all the new AI tools that keep emerging. As many, I first used them for myself, to boost my productivity at work and to ship personal side projects. But I realized that others were also working on their own tools and assistants, duplicating work and efforts across the company, and I came up with this initiative to faster AI adoption among our Tribe.</p>
+        <p className="page-lede">It's one example of an AI topic I've successfully driven and rolled out, that I wanted to share as part of my application for this role. You can scroll down to follow the journey.</p>
         <div className="journey-summary">
           <span className="tag tag-accent-2">{shipped} steps shipped</span>
           <span className="tag tag-accent">{inProgress} in progress</span>
@@ -111,9 +111,11 @@ export default function Roadmap() {
                   </div>
                   <h2 className="step-title">{step.title}</h2>
                   <p className="step-desc">{step.desc}</p>
-                  <div className="row">
-                    {step.tags.map((t) => <span key={t} className="tag tag-neutral">{t}</span>)}
-                  </div>
+                  {step.tags?.length > 0 && (
+                    <div className="row">
+                      {step.tags.map((t) => <span key={t} className="tag tag-neutral">{t}</span>)}
+                    </div>
+                  )}
                 </div>
               </li>
             );
@@ -123,7 +125,7 @@ export default function Roadmap() {
 
       <aside data-reveal className="tldr" aria-label="Summary">
         <span className="tldr-label">tl;dr</span>
-        <p className="tldr-text">I designed the framework for the team, ran demos, and they all became users and contributors to the project.</p>
+        <p className="tldr-text">This project is an example of how I was able to ship a set of AI tools adopted by an audience of people with different technical backgrounds, different goals, sharing their goals and feedbacks to make it better.</p>
       </aside>
     </section>
   );
