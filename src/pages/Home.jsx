@@ -121,8 +121,8 @@ export default function Home() {
         </div>
         <div data-reveal className="card app-card">
           <div className="app-card-text">
-            <div className="app-card-title">My AI OS at Betclic</div>
-            <div className="app-card-sub">Skills, a plugin and agents I built for the Product tribe</div>
+            <div className="app-card-title">I've built it for Product Teams</div>
+            <div className="app-card-sub">An example of use cases I tackled for the Product Teams I'm working with</div>
           </div>
           <a href={hrefFor('roadmap')} className="btn btn-primary">See my AI OS →</a>
         </div>
