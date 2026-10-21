@@ -137,9 +137,11 @@ export default function Home() {
         </div>
         <div data-reveal className="prose">
           <span className="eyebrow">Why me</span>
-          <h2 className="section-title">A builder for your AI sales team</h2>
-          <p>I strongly believe I could be a good fit for this position, thanks to my experience in scale-ups working with sales teams, my data and AI expertise, and my PM skills. I have a builder mindset that I want to bring to this role.</p>
-          <p>Feel free to explore this website to learn more about me. You'll find my contact details below if you'd like to reach out.</p>
+          <h2 className="section-title">A translator, not just a builder</h2>
+          <p>I've always loved building things from scratch: that startup mindset of getting hands-on and making things happen.</p>
+          <p>The teams I've worked with have always valued me as a translator: someone who understands what Sales, Ops, Data and Tech each need, and can explain it back in their own language. It's something I genuinely enjoy, and I believe it's key for this role.</p>
+          <p>I also miss working with sales people. At Cubyn, sitting with the team, understanding why a deal was won or lost, and building tools to help them close faster was one of the most rewarding parts of my experience there.</p>
+          <p>I built this website so you can get a glimpse of my personality and experience. I'd love to talk about how we could build Alan's AI sales team together.</p>
           <div style={{ marginTop: 28 }}>
             <a href={hrefFor('contact')} className="btn btn-primary">Get in touch →</a>
           </div>
