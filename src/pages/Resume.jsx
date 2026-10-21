@@ -1,5 +1,5 @@
 import {
-  contact, education, experience, interests, languages, resume, skillGroups, skillsNote,
+  contact, education, experience, interests, resume,
 } from '../data/content.js';
 import { DownloadIcon } from '../components/Icons.jsx';
 import cv from '../assets/CV_Paul_Dumas.pdf';
@@ -55,46 +55,8 @@ export default function Resume() {
       </div>
 
       <div className="resume-body">
-        <div className="experience">
-          <div className="experience-rail" aria-hidden="true" />
-          <div className="experience-list">
-            {experience.map((x) => (
-              <div key={x.role} data-reveal className="experience-item">
-                <span className="experience-node" style={{ background: x.dot }} aria-hidden="true" />
-                <article className="card experience-card">
-                  <div className="experience-top">
-                    <h3>{x.role}</h3>
-                    <span className="experience-dates">{x.dates}</span>
-                  </div>
-                  <div className="experience-company">{x.company} · {x.location}</div>
-                  {x.phases.map((p) => <Phase key={p.intro} phase={p} />)}
-                </article>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div data-reveal className="panel panel--neutral resume-skills">
-          <h3>Skills</h3>
-          <div className="skill-groups">
-            <div>
-              <div className="skill-label">Languages</div>
-              <div className="skill-text">{languages}</div>
-            </div>
-            {skillGroups.map((g) => (
-              <div key={g.label}>
-                <div className="skill-label">{g.label}</div>
-                <div className="row">
-                  {g.items.map((s) => <span key={s} className={`tag ${g.cls}`}>{s}</span>)}
-                </div>
-              </div>
-            ))}
-            <p className="skill-note">{skillsNote}</p>
-          </div>
-        </div>
-
-        <div data-reveal className="panel panel--sage resume-education">
-          <h3>Education</h3>
+        <section data-reveal className="resume-section">
+          <h2 className="resume-section-title">Education</h2>
           <div className="education">
             {education.map((e) => (
               <div key={e.school}>
@@ -103,10 +65,32 @@ export default function Resume() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div data-reveal className="panel panel--terracotta resume-interests">
-          <h3>Other interests</h3>
+        <section className="resume-section">
+          <h2 data-reveal className="resume-section-title">Experience</h2>
+          <div className="experience">
+            <div className="experience-rail" aria-hidden="true" />
+            <div className="experience-list">
+              {experience.map((x) => (
+                <div key={x.role} data-reveal className="experience-item">
+                  <span className="experience-node" style={{ background: x.dot }} aria-hidden="true" />
+                  <article className="card experience-card">
+                    <div className="experience-top">
+                      <h3>{x.role}</h3>
+                      <span className="experience-dates">{x.dates}</span>
+                    </div>
+                    <div className="experience-company">{x.company} · {x.location}</div>
+                    {x.phases.map((p) => <Phase key={p.intro} phase={p} />)}
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section data-reveal className="resume-section">
+          <h2 className="resume-section-title">Other interests</h2>
           <ul className="interests">
             {interests.map((i) => (
               <li key={i.label}>
@@ -115,7 +99,7 @@ export default function Resume() {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </div>
     </section>
   );

@@ -3,8 +3,8 @@
 import productOsStructure from '../assets/product-os-structure.jpg';
 import claudePluginSkills from '../assets/claude-plugin-skills.png';
 import workspaceStructure from '../assets/workspace-structure.jpg';
-import agentWorkflow from '../assets/agent-workflow.jpg';
-import teamsAgentFlow from '../assets/teams-agent-flow.jpg';
+import agentWorkflow from '../assets/agent-workflow.png';
+import teamsAgentFlow from '../assets/teams-agent-flow.png';
 
 // Toggles carried over from the design's editor props.
 export const config = {
@@ -245,6 +245,6 @@ export const skillGroups = [
 export const skillsNote = 'Curious and keen on learning, I regularly take new certifications — more on my LinkedIn.';
 
 export const interests = [
-  { label: 'Sports', text: 'Rugby in competition (20+ years), Trail' },
-  { label: 'Side Projects', text: 'Building AI-first PWAs (sports planner via LLM API + Google Calendar, Recipe planner with Supabase..), exploring how to move from simple chatbots to proactive AI-first products' },
+  { label: 'Sports', text: 'Rugby in competition (20+ years), Trail running, Surfing' },
+  { label: 'Side Projects', text: 'I like to build AI conversational products (sports planner via LLM API + Google Calendar, Recipe planner with Supabase..) on my free time to explore and test AI tools and their capabilities' },
 ];

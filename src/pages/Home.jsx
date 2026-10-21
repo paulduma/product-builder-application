@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { visionPoints } from '../data/content.js';
-import Placeholder from '../components/Placeholder.jsx';
 import { hrefFor } from '../nav.js';
-import verdi from '../assets/verdi.jpg';
+import architect from '../assets/architect.png';
+import wavingBear from '../assets/waving-bear.jpg';
 
 // Hero title job: types "Owner", swaps it for "Manager", then lands on "Builder" and stays.
 const ROLES = ['Owner', 'Manager', 'Builder'];
@@ -64,31 +64,22 @@ function TypedRole() {
 export default function Home() {
   return (
     <>
-      <section className="split hero" data-screen-label="Home">
+      <section className="hero" data-screen-label="Home">
         <div data-reveal>
           <h1>
             <span className="hello">Hello 👋</span>
-            <span>My name is Paul, I'm a Product <TypedRole /></span>
+            <span>My name is Paul,</span>
+            <span>I'm a Product <TypedRole /></span>
           </h1>
-          <p className="hero-lede">I'd like to reach out to help you build the future of sales with AI. I'd like to bring my proven record of working at the crossroad of Tech, Business, Sales and Operations in Product companies, and would love to know more about your vision for this position.</p>
+          <p className="hero-lede">I'd like to bring my proven record of working at the crossroad of Tech, Business, Sales and Operations in Product companies, and would love to know more about your vision for the <strong>Product Builder position</strong> within the Sales Team.</p>
           <div className="row">
             <a href={hrefFor('resume')} className="btn btn-secondary">Check my resume</a>
             <a href={hrefFor('roadmap')} className="btn btn-primary">See my AI OS</a>
           </div>
         </div>
-        <div data-reveal className="art">
-          <div className="blob" style={{ width: '46%', background: 'var(--color-accent-200)', right: '-4%', top: '-8%' }} />
-          <div className="blob" style={{ width: '22%', background: 'var(--color-accent-2-300)', left: '-3%', bottom: '-4%' }} />
-          <div className="hero-art">
-            <img
-              src={verdi}
-              alt="Verdi, a brown and white dog, lying on the floor"
-            />
-          </div>
-        </div>
       </section>
 
-      <section className="split" data-screen-label="Home · About me">
+      <section className="feature" data-screen-label="Home · About me">
         <div data-reveal className="prose">
           <span className="eyebrow">A little bit about myself</span>
           <h2 className="section-title">My journey across product</h2>
@@ -96,19 +87,17 @@ export default function Home() {
           <p>Over the last few years, what I've enjoyed most is working more and more with AI. It broke the time barrier for building, let me unleash my creativity, and allowed me to build the products I imagined myself.</p>
           <p>Today, looking for a new challenge, I'm curious to hear more about the Product Builder role, that fits the ambitions that I have for what's next.</p>
         </div>
-        <div data-reveal className="art">
-          <div className="blob" style={{ width: '38%', background: 'var(--color-accent-100)', left: '-6%', top: '-6%' }} />
-          <Placeholder style={{ aspectRatio: '1', maxWidth: 460, marginLeft: 'auto', borderRadius: '50%', padding: 56 }}>
-            [Illustration placeholder: a winding path from a school building to a product whiteboard]
-          </Placeholder>
+        <div data-reveal className="feature-art">
+          <div className="blob" style={{ width: '72%', background: 'var(--color-accent-200)', right: '-16%', top: '-18%' }} />
+          <img className="feature-thumb feature-photo" src={architect} alt="An architect standing beside a model" />
         </div>
       </section>
 
       <section className="vision" data-screen-label="Home · My AI vision">
         <div data-reveal className="prose vision-intro">
-          <span className="eyebrow eyebrow--sage">My AI vision</span>
-          <h2 className="section-title">Fast iterations, strong feedback loops</h2>
-          <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I might have lost some time reading and listening about AI features, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, <strong>testing and working directly with the core users</strong> is at the center of my approach.</p>
+          <span className="eyebrow eyebrow--sage">Fast iterations, strong feedback loops</span>
+          <h2 className="section-title">Building AI for Sales Teams</h2>
+          <p>I strongly believe this is a technology you need to feel and experiment with, more than any other. At first, I might have personally lost some time reading and listening about AI features, or watching cool demos, but that didn't help me much in making it work for my own use cases. Now that iterating is so easy, <strong>testing and working directly with the core users</strong> is at the center of my approach.</p>
         </div>
         <div className="vision-grid">
           {visionPoints.map((v) => (
@@ -128,23 +117,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split split--last" data-screen-label="Home · Why me">
-        <div data-reveal className="art">
-          <div className="blob" style={{ width: '34%', background: 'var(--color-accent-2-200)', right: '-4%', top: '-8%' }} />
-          <Placeholder tone="terracotta-soft" style={{ aspectRatio: '5 / 4', maxWidth: 520, borderRadius: '64px 160px 64px 64px', padding: 40 }}>
-            [Illustration placeholder: the builder character waving next to a freshly built website]
-          </Placeholder>
-        </div>
+      <section className="feature feature--last" data-screen-label="Home · Why me">
         <div data-reveal className="prose">
           <span className="eyebrow">Why me</span>
           <h2 className="section-title">A translator, not just a builder</h2>
           <p>I've always loved building things from scratch: that startup mindset of getting hands-on and making things happen.</p>
-          <p>The teams I've worked with have always valued me as a translator: someone who understands what Sales, Ops, Data and Tech each need, and can explain it back in their own language. It's something I genuinely enjoy, and I believe it's key for this role.</p>
+          <p>The teams I've worked with have always valued me as a translator: someone who understands what Sales, Ops, Data and Tech each need, and <strong>can explain it back in their own language</strong>. It's something I genuinely enjoy, and I believe it's key for this role.</p>
           <p>I also miss working with sales people. At Cubyn, sitting with the team, understanding why a deal was won or lost, and building tools to help them close faster was one of the most rewarding parts of my experience there.</p>
           <p>I built this website so you can get a glimpse of my personality and experience. I'd love to talk about how we could build Alan's AI sales team together.</p>
           <div style={{ marginTop: 28 }}>
             <a href={hrefFor('contact')} className="btn btn-primary">Get in touch →</a>
           </div>
+        </div>
+        <div data-reveal className="feature-art">
+          <div className="blob" style={{ width: '72%', background: 'var(--color-accent-200)', right: '-16%', top: '-18%' }} />
+          <img className="feature-thumb feature-photo" src={wavingBear} alt="The builder character waving hello" />
         </div>
       </section>
     </>
